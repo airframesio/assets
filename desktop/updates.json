@@ -1,0 +1,23 @@
+{
+  "version": "v0.1.2",
+  "notes": "Alpha",
+  "pub_date": "2022-08-09T20:05:57Z",
+  "platforms": {
+    "darwin-x86_64": {
+      "signature": "",
+      "url": "https://github.com/airframesio/assets/desktop/releases/v0.1.2/Airframes.app.tar.gz"
+    },
+    "darwin-aarch64": {
+      "signature": "",
+      "url": "https://github.com/lemarier/tauri-test/releases/download/v0.1.2/silicon/Airframes.app.tar.gz"
+    },
+    "linux-x86_64": {
+      "signature": "",
+      "url": "https://github.com/lemarier/tauri-test/releases/download/v0.1.2/Airframes.AppImage.tar.gz"
+    },
+    "windows-x86_64": {
+      "signature": "",
+      "url": "https://github.com/lemarier/tauri-test/releases/download/v0.1.2/Airframes.x64.msi.zip"
+    }
+  }
+}
