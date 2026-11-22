@@ -1,0 +1,44 @@
+name: Update desktop folder
+
+# Keeps desktop/ on main in step with the latest published Airframes Desktop
+# release (desktop-v* tags, drafted by airframesio/desktop-app's release job).
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag (default: newest published desktop-v*)"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: desktop-folder
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.event.release.tag_name, 'desktop-v')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Rewrite desktop/
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name || inputs.tag }}
+        run: python3 scripts/update_desktop_folder.py $TAG
+      - name: Commit
+        run: |
+          git add desktop
+          if git diff --cached --quiet; then
+            echo "desktop/ already up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update desktop/ for ${{ github.event.release.tag_name || inputs.tag || 'the latest desktop release' }}"
+          git push origin HEAD:main

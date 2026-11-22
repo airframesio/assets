@@ -1,15 +1,15 @@
 {
-  "version": "v0.1.4",
-  "notes": "Alpha",
-  "pub_date": "2022-08-09T20:05:57Z",
+  "version": "v0.2.5",
+  "notes": "See the assets to download this version and install.",
+  "pub_date": "2026-11-22T17:26:32.576Z",
   "platforms": {
     "darwin-x86_64": {
-      "signature": "",
-      "url": "https://github.com/airframesio/assets/desktop/releases/v0.1.2/Airframes.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dS9rSWxVSDdNN2wwTlQ4cncveExiQkc2Z1U1ZktuZEZnejI5c2JFUytNc0NBVUw5bWIzRVpTK1ZPQStMWkFta3ZIWlFhQWIwNVdVSFhVN2ZlVjR2T1EwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MzY3ODAzCWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuNQo0T2dGVjVuSHkxUVhSSENQTlpyR3BLN1dibjlDR1Zpc0RCeVhGcTJOdnZqZVNqUXhObXZ3Rnhoeml6bUN4UTUyaDB3YVB5RUQ3azR3dC9VeVF5WHFEUT09Cg==",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.5/Airframes_universal.app.tar.gz"
     },
-    "windows-x86_64": {
-      "signature": "",
-      "url": "https://github.com/airframesio/assets/raw/main/desktop/releases/Airframes_Desktop_0.1.2_x64_en-US.msi"
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dS9rSWxVSDdNN2wwTlQ4cncveExiQkc2Z1U1ZktuZEZnejI5c2JFUytNc0NBVUw5bWIzRVpTK1ZPQStMWkFta3ZIWlFhQWIwNVdVSFhVN2ZlVjR2T1EwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MzY3ODAzCWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuNQo0T2dGVjVuSHkxUVhSSENQTlpyR3BLN1dibjlDR1Zpc0RCeVhGcTJOdnZqZVNqUXhObXZ3Rnhoeml6bUN4UTUyaDB3YVB5RUQ3azR3dC9VeVF5WHFEUT09Cg==",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.5/Airframes_universal.app.tar.gz"
     }
   }
 }
