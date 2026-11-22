@@ -7,14 +7,6 @@
       "signature": "",
       "url": "https://github.com/airframesio/assets/desktop/releases/v0.1.2/Airframes.app.tar.gz"
     },
-    "darwin-aarch64": {
-      "signature": "",
-      "url": "https://github.com/lemarier/tauri-test/releases/download/v0.1.2/silicon/Airframes.app.tar.gz"
-    },
-    "linux-x86_64": {
-      "signature": "",
-      "url": "https://github.com/lemarier/tauri-test/releases/download/v0.1.2/Airframes.AppImage.tar.gz"
-    },
     "windows-x86_64": {
       "signature": "",
       "url": "https://github.com/airframesio/assets/raw/main/desktop/releases/Airframes_Desktop_0.1.2_x64_en-US.msi"
