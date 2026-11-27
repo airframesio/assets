@@ -1,15 +1,15 @@
 {
-  "version": "v0.2.6",
+  "version": "v0.2.7",
   "notes": "See the assets to download this version and install.",
-  "pub_date": "2026-11-26T19:51:20.801Z",
+  "pub_date": "2026-11-27T01:04:08.632Z",
   "platforms": {
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTVoZStSOXh2aDhXRjJxODVGOTdyZFkyVEhUMWRBcVVrbE5XQ0t1aTlzRWdYTGJvTnk4Qy9BOHk2eXZySjVyV0FJTGtCU3ByOVNCRVFTcXVVU0pwQkFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NzIyMDc3CWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuNgp6RUFOT1JnNnZZMmd5bGJVWDV2NnVpa3pWMkxJb0ppbXNlYWVxRU5KZFRtTVRxMXh0MExDcm00OUZBeGx2dkZKTUpMSXhEVTkwZDBDajhJczBqTEJDZz09Cg==",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.6/Airframes_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dStsZUF1ZWNQK0pJWHB3YjZUUEsvaDlDM0xmREc2L3NjQmlKY3pvSVhVdDJnUkNoRHREVEhWYVAzU2Qvc213V09HdWdtK1k2cm5kcUY3aTJDVGJpWFFFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NzQwODk2CWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuNwo2YktUcFg4NDlmVThNR0twRS85ZVE3L08vWmlYb3VyckVZS3ZZSXpOSU9HQzN2WnBJK1BoMWExd0NkckJZU1lyODlQSWtMSkZka3djaVEvRHVKZFNBQT09Cg==",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.7/Airframes_universal.app.tar.gz"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTVoZStSOXh2aDhXRjJxODVGOTdyZFkyVEhUMWRBcVVrbE5XQ0t1aTlzRWdYTGJvTnk4Qy9BOHk2eXZySjVyV0FJTGtCU3ByOVNCRVFTcXVVU0pwQkFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NzIyMDc3CWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuNgp6RUFOT1JnNnZZMmd5bGJVWDV2NnVpa3pWMkxJb0ppbXNlYWVxRU5KZFRtTVRxMXh0MExDcm00OUZBeGx2dkZKTUpMSXhEVTkwZDBDajhJczBqTEJDZz09Cg==",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.6/Airframes_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dStsZUF1ZWNQK0pJWHB3YjZUUEsvaDlDM0xmREc2L3NjQmlKY3pvSVhVdDJnUkNoRHREVEhWYVAzU2Qvc213V09HdWdtK1k2cm5kcUY3aTJDVGJpWFFFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NzQwODk2CWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuNwo2YktUcFg4NDlmVThNR0twRS85ZVE3L08vWmlYb3VyckVZS3ZZSXpOSU9HQzN2WnBJK1BoMWExd0NkckJZU1lyODlQSWtMSkZka3djaVEvRHVKZFNBQT09Cg==",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.7/Airframes_universal.app.tar.gz"
     }
   }
 }
