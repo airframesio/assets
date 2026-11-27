@@ -27,6 +27,7 @@ const icons = ICONS.map((i) => ({
   color: i.color,
   stroke: i.stroke,
   rotate: i.rotate,
+  scale: i.scale,
   codes: i.codes ?? [],
   names: i.names ?? [],
   svg: iconSvg(i),
@@ -49,7 +50,7 @@ const data = icons
   .map(
     (i) =>
       `  {\n    key: '${i.key}',\n    label: ${JSON.stringify(i.label)},\n    group: ${JSON.stringify(i.group)},\n` +
-      `    color: '${i.color}',\n    rotate: ${i.rotate},\n    codes: ${JSON.stringify(i.codes)},\n` +
+      `    color: '${i.color}',\n    rotate: ${i.rotate},\n    scale: ${i.scale},\n    codes: ${JSON.stringify(i.codes)},\n` +
       `    names: ${JSON.stringify(i.names)},\n    svg: ${JSON.stringify(i.svg)},\n  },`,
   )
   .join('\n');
@@ -74,6 +75,8 @@ export interface MarineIcon {
   color: string;
   /** True when the map should turn the icon by course or heading (it points north). */
   rotate: boolean;
+  /** Size relative to a typical 100 m ship (1); see marineIconScale(). */
+  scale: number;
   /** AIS ship and cargo type codes (or [from, to] ranges) that select this icon. */
   codes: (number | [number, number])[];
   /** Words in type text that select this icon. */
@@ -137,7 +140,7 @@ const sheet = (bg, fg) =>
           .filter((i) => i.group === g)
           .map(
             (i) =>
-              `<figure><div class="pair">${i.svg.replace('width="32" height="32"', 'width="56" height="56"')}` +
+              `<figure><div class="pair">${i.svg.replace('width="32" height="32"', `width="${Math.round(48 * (i.scale ?? 1))}" height="${Math.round(48 * (i.scale ?? 1))}"`)}` +
               `<span style="transform:rotate(${i.rotate ? 40 : 0}deg)">${i.svg.replace('width="32" height="32"', 'width="24" height="24"')}</span></div>` +
               `<figcaption>${i.label}</figcaption></figure>`,
           )

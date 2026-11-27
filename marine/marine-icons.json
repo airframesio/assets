@@ -9,6 +9,7 @@
       "color": "#2f9e44",
       "stroke": "#1b5e2a",
       "rotate": true,
+      "scale": 1.25,
       "codes": [
         [
           70,
@@ -33,6 +34,7 @@
       "color": "#e03131",
       "stroke": "#8f1d1d",
       "rotate": true,
+      "scale": 1.25,
       "codes": [
         [
           80,
@@ -55,6 +57,7 @@
       "color": "#1c7ed6",
       "stroke": "#0f4c8a",
       "rotate": true,
+      "scale": 1.15,
       "codes": [
         [
           60,
@@ -76,6 +79,7 @@
       "color": "#f5b800",
       "stroke": "#8a6400",
       "rotate": true,
+      "scale": 0.85,
       "codes": [
         [
           40,
@@ -96,6 +100,7 @@
       "color": "#f0794a",
       "stroke": "#9c3f1a",
       "rotate": true,
+      "scale": 0.75,
       "codes": [
         30
       ],
@@ -112,6 +117,7 @@
       "color": "#0ca678",
       "stroke": "#065c42",
       "rotate": true,
+      "scale": 0.65,
       "codes": [
         31,
         32,
@@ -131,6 +137,7 @@
       "color": "#ffffff",
       "stroke": "#c92a2a",
       "rotate": true,
+      "scale": 0.65,
       "codes": [
         50
       ],
@@ -146,6 +153,7 @@
       "color": "#fd7e14",
       "stroke": "#a14a00",
       "rotate": true,
+      "scale": 0.7,
       "codes": [
         51
       ],
@@ -165,6 +173,7 @@
       "color": "#1f3f99",
       "stroke": "#0c1d4f",
       "rotate": true,
+      "scale": 0.75,
       "codes": [
         55
       ],
@@ -183,6 +192,7 @@
       "color": "#66727f",
       "stroke": "#2b323a",
       "rotate": true,
+      "scale": 1.05,
       "codes": [
         35
       ],
@@ -201,6 +211,7 @@
       "color": "#7950f2",
       "stroke": "#3d1f9e",
       "rotate": true,
+      "scale": 0.65,
       "codes": [
         36
       ],
@@ -218,6 +229,7 @@
       "color": "#d6336c",
       "stroke": "#7d1438",
       "rotate": true,
+      "scale": 0.6,
       "codes": [
         37
       ],
@@ -235,6 +247,7 @@
       "color": "#15aabf",
       "stroke": "#0a5a66",
       "rotate": true,
+      "scale": 0.85,
       "codes": [
         33,
         34,
@@ -268,6 +281,7 @@
       "color": "#74b816",
       "stroke": "#3b5e0b",
       "rotate": true,
+      "scale": 0.7,
       "codes": [
         [
           20,
@@ -288,6 +302,7 @@
       "color": "#5c6670",
       "stroke": "#22282e",
       "rotate": true,
+      "scale": 0.9,
       "codes": [
         [
           90,
@@ -315,6 +330,7 @@
       "color": "#a7b1bb",
       "stroke": "#4a535c",
       "rotate": true,
+      "scale": 0.8,
       "codes": [
         0
       ],
@@ -331,6 +347,7 @@
       "color": "#a7b1bb",
       "stroke": "#4a535c",
       "rotate": true,
+      "scale": 0.6,
       "codes": [],
       "names": [
         "class b",
@@ -346,6 +363,7 @@
       "color": "#fcc419",
       "stroke": "#5c4400",
       "rotate": false,
+      "scale": 0.7,
       "codes": [],
       "names": [
         "aid to navigation",
@@ -363,6 +381,7 @@
       "color": "#fcc419",
       "stroke": "#5c4400",
       "rotate": false,
+      "scale": 0.75,
       "codes": [],
       "names": [
         "lighthouse",
@@ -380,6 +399,7 @@
       "color": "none",
       "stroke": "#e8a200",
       "rotate": false,
+      "scale": 0.7,
       "codes": [],
       "names": [
         "virtual aid",
@@ -395,6 +415,7 @@
       "color": "#3b5bdb",
       "stroke": "#1c2f80",
       "rotate": false,
+      "scale": 0.8,
       "codes": [],
       "names": [
         "base station",
@@ -410,6 +431,7 @@
       "color": "#fd7e14",
       "stroke": "#8a3c00",
       "rotate": true,
+      "scale": 0.75,
       "codes": [],
       "names": [
         "sar aircraft",
@@ -425,6 +447,7 @@
       "color": "#f03e3e",
       "stroke": "#7a0f0f",
       "rotate": false,
+      "scale": 0.8,
       "codes": [],
       "names": [
         "sart",
@@ -440,6 +463,7 @@
       "color": "#f03e3e",
       "stroke": "#7a0f0f",
       "rotate": false,
+      "scale": 0.8,
       "codes": [],
       "names": [
         "mob",
@@ -455,6 +479,7 @@
       "color": "#f03e3e",
       "stroke": "#7a0f0f",
       "rotate": false,
+      "scale": 0.8,
       "codes": [],
       "names": [
         "epirb",

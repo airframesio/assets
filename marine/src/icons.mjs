@@ -4,6 +4,10 @@
 // and turn about the center (16, 16), so a map can rotate them by course or
 // heading. Station, aid and beacon icons are upright symbols and do not turn.
 //
+// `scale` is the icon's size relative to a typical 100 m ship (1). It is not
+// a true size ratio, only enough that a container ship reads bigger than a
+// yacht; marineIconScale() uses the reported length instead when it is known.
+//
 // build.mjs turns this file into the SVG files, the TypeScript module the apps
 // copy, the sprite sheets and the preview sheet. Edit here, then run
 // `node marine/src/build.mjs`.
@@ -40,7 +44,7 @@ const SHADE = 'rgba(0,0,0,0.28)';
  */
 export const ICONS = [
   {
-    key: 'cargo', label: 'Cargo', group: 'Ships', color: '#2f9e44', stroke: '#1b5e2a', rotate: true,
+    key: 'cargo', label: 'Cargo', group: 'Ships', color: '#2f9e44', stroke: '#1b5e2a', rotate: true, scale: 1.25,
     codes: [[70, 79]], names: ['cargo', 'container', 'bulk', 'reefer', 'vehicle carrier', 'ro-ro', 'general cargo'],
     body: hull({ top: 2.5, bottom: 29.5, hb: 5.6, bow: 7 }),
     details: [
@@ -51,7 +55,7 @@ export const ICONS = [
     ],
   },
   {
-    key: 'tanker', label: 'Tanker', group: 'Ships', color: '#e03131', stroke: '#8f1d1d', rotate: true,
+    key: 'tanker', label: 'Tanker', group: 'Ships', color: '#e03131', stroke: '#8f1d1d', rotate: true, scale: 1.25,
     codes: [[80, 89]], names: ['tanker', 'lng', 'lpg', 'chemical', 'oil'],
     body: hull({ top: 2.5, bottom: 29.5, hb: 5.6, bow: 6.2, r: 2.4 }),
     details: [
@@ -63,7 +67,7 @@ export const ICONS = [
     ],
   },
   {
-    key: 'passenger', label: 'Passenger', group: 'Ships', color: '#1c7ed6', stroke: '#0f4c8a', rotate: true,
+    key: 'passenger', label: 'Passenger', group: 'Ships', color: '#1c7ed6', stroke: '#0f4c8a', rotate: true, scale: 1.15,
     codes: [[60, 69]], names: ['passenger', 'ferry', 'cruise', 'ro-pax'],
     body: hull({ top: 2.5, bottom: 29.5, hb: 6.2, bow: 8.5, r: 4 }),
     details: [
@@ -73,7 +77,7 @@ export const ICONS = [
     ],
   },
   {
-    key: 'high-speed', label: 'High speed craft', group: 'Ships', color: '#f5b800', stroke: '#8a6400', rotate: true,
+    key: 'high-speed', label: 'High speed craft', group: 'Ships', color: '#f5b800', stroke: '#8a6400', rotate: true, scale: 0.85,
     codes: [[40, 49]], names: ['high speed', 'hsc', 'hydrofoil'],
     body: [
       hull({ cx: 11.4, top: 4, bottom: 28, hb: 2.4, bow: 6.5, r: 1 }),
@@ -86,7 +90,7 @@ export const ICONS = [
     ],
   },
   {
-    key: 'fishing', label: 'Fishing', group: 'Ships', color: '#f0794a', stroke: '#9c3f1a', rotate: true,
+    key: 'fishing', label: 'Fishing', group: 'Ships', color: '#f0794a', stroke: '#9c3f1a', rotate: true, scale: 0.75,
     codes: [30], names: ['fishing', 'trawler'],
     body: hull({ top: 6.5, bottom: 26.5, hb: 4.6, bow: 5.6 }),
     details: [
@@ -100,7 +104,7 @@ export const ICONS = [
     haloExtra: `<path d="M16 17L5.2 12.6M16 17L26.8 12.6" stroke-width="4"/><circle cx="5.2" cy="12.6" r="2.6"/><circle cx="26.8" cy="12.6" r="2.6"/>`,
   },
   {
-    key: 'tug', label: 'Tug and towing', group: 'Ships', color: '#0ca678', stroke: '#065c42', rotate: true,
+    key: 'tug', label: 'Tug and towing', group: 'Ships', color: '#0ca678', stroke: '#065c42', rotate: true, scale: 0.65,
     codes: [31, 32, 52], names: ['tug', 'towing', 'tow'],
     body: hull({ top: 6, bottom: 26, hb: 6, bow: 4.5, r: 3, blunt: 2.4 }),
     strokeWidth: 2,
@@ -110,7 +114,7 @@ export const ICONS = [
     ],
   },
   {
-    key: 'pilot', label: 'Pilot', group: 'Ships', color: '#ffffff', stroke: '#c92a2a', rotate: true,
+    key: 'pilot', label: 'Pilot', group: 'Ships', color: '#ffffff', stroke: '#c92a2a', rotate: true, scale: 0.65,
     codes: [50], names: ['pilot'],
     body: hull({ top: 6, bottom: 26.5, hb: 4.6, bow: 6 }),
     details: [
@@ -120,7 +124,7 @@ export const ICONS = [
     ],
   },
   {
-    key: 'sar', label: 'Search and rescue', group: 'Ships', color: '#fd7e14', stroke: '#a14a00', rotate: true,
+    key: 'sar', label: 'Search and rescue', group: 'Ships', color: '#fd7e14', stroke: '#a14a00', rotate: true, scale: 0.7,
     codes: [51], names: ['search and rescue', 'sar', 'rescue', 'lifeboat', 'coast guard'],
     body: hull({ top: 4.5, bottom: 27.5, hb: 5.2, bow: 6.6 }),
     clipDetails: true,
@@ -130,7 +134,7 @@ export const ICONS = [
     ],
   },
   {
-    key: 'law', label: 'Law enforcement', group: 'Ships', color: '#1f3f99', stroke: '#0c1d4f', rotate: true,
+    key: 'law', label: 'Law enforcement', group: 'Ships', color: '#1f3f99', stroke: '#0c1d4f', rotate: true, scale: 0.75,
     codes: [55], names: ['law enforcement', 'police', 'patrol', 'customs'],
     body: hull({ top: 4.5, bottom: 27.5, hb: 5.2, bow: 6.6 }),
     clipDetails: true,
@@ -140,7 +144,7 @@ export const ICONS = [
     ],
   },
   {
-    key: 'military', label: 'Military', group: 'Ships', color: '#66727f', stroke: '#2b323a', rotate: true,
+    key: 'military', label: 'Military', group: 'Ships', color: '#66727f', stroke: '#2b323a', rotate: true, scale: 1.05,
     codes: [35], names: ['military', 'naval', 'navy', 'warship'],
     body: 'M16 1.8L21.2 9.4V26.8L19.2 30H12.8L10.8 26.8V9.4Z',
     details: [
@@ -151,7 +155,7 @@ export const ICONS = [
     ],
   },
   {
-    key: 'sailing', label: 'Sailing', group: 'Ships', color: '#7950f2', stroke: '#3d1f9e', rotate: true,
+    key: 'sailing', label: 'Sailing', group: 'Ships', color: '#7950f2', stroke: '#3d1f9e', rotate: true, scale: 0.65,
     codes: [36], names: ['sailing', 'sail', 'yacht'],
     body: hull({ top: 5, bottom: 27.5, hb: 4.2, bow: 8, r: 2.2 }),
     details: [
@@ -162,7 +166,7 @@ export const ICONS = [
     haloExtra: `<path d="M16 11.2C21.8 14.6 22.8 20 21.2 25.4L16 25.4Z" stroke-width="3"/>`,
   },
   {
-    key: 'pleasure', label: 'Pleasure craft', group: 'Ships', color: '#d6336c', stroke: '#7d1438', rotate: true,
+    key: 'pleasure', label: 'Pleasure craft', group: 'Ships', color: '#d6336c', stroke: '#7d1438', rotate: true, scale: 0.6,
     codes: [37], names: ['pleasure', 'motor yacht', 'recreational'],
     body: hull({ top: 8, bottom: 25.5, hb: 4, bow: 5.6, r: 2 }),
     details: [
@@ -171,7 +175,7 @@ export const ICONS = [
     ],
   },
   {
-    key: 'special', label: 'Special craft', group: 'Ships', color: '#15aabf', stroke: '#0a5a66', rotate: true,
+    key: 'special', label: 'Special craft', group: 'Ships', color: '#15aabf', stroke: '#0a5a66', rotate: true, scale: 0.85,
     codes: [33, 34, 53, 54, 56, 57, 58, 59],
     names: ['dredging', 'dredger', 'diving', 'port tender', 'anti-pollution', 'medical', 'research', 'survey', 'cable', 'buoy tender', 'icebreaker', 'special'],
     body: hull({ top: 3.5, bottom: 28.5, hb: 5.4, bow: 6.4 }),
@@ -184,7 +188,7 @@ export const ICONS = [
     haloExtra: `<path d="M16 12.4L25.6 7.6" stroke-width="4"/>`,
   },
   {
-    key: 'wig', label: 'Wing in ground', group: 'Ships', color: '#74b816', stroke: '#3b5e0b', rotate: true,
+    key: 'wig', label: 'Wing in ground', group: 'Ships', color: '#74b816', stroke: '#3b5e0b', rotate: true, scale: 0.7,
     codes: [[20, 29]], names: ['wing in ground', 'wig', 'ekranoplan'],
     body: [
       hull({ top: 4, bottom: 28, hb: 3.2, bow: 6, r: 1.4 }),
@@ -194,19 +198,19 @@ export const ICONS = [
     details: [`<path d="M14.4 9.6Q16 8.4 17.6 9.6" stroke="${WHITE}" stroke-width="1.2" fill="none"/>`],
   },
   {
-    key: 'other', label: 'Other ship', group: 'Ships', color: '#5c6670', stroke: '#22282e', rotate: true,
+    key: 'other', label: 'Other ship', group: 'Ships', color: '#5c6670', stroke: '#22282e', rotate: true, scale: 0.9,
     codes: [[90, 99], [1, 19], [38, 39]], names: ['other', 'reserved'],
     body: hull({ top: 4, bottom: 28, hb: 5.2, bow: 7 }),
     details: [`<rect x="12.4" y="21.4" width="7.2" height="3.6" rx="0.8" fill="${SOFT}"/>`],
   },
   {
-    key: 'unknown', label: 'Unknown type', group: 'Ships', color: '#a7b1bb', stroke: '#4a535c', rotate: true,
+    key: 'unknown', label: 'Unknown type', group: 'Ships', color: '#a7b1bb', stroke: '#4a535c', rotate: true, scale: 0.8,
     codes: [0], names: ['unknown', 'not available'],
     body: hull({ top: 4, bottom: 28, hb: 5.2, bow: 7 }),
     details: [`<path d="M16 10.6V22" stroke="${SHADE}" stroke-width="1.4" stroke-linecap="round"/>`],
   },
   {
-    key: 'class-b', label: 'Small craft (class B)', group: 'Ships', color: '#a7b1bb', stroke: '#4a535c', rotate: true,
+    key: 'class-b', label: 'Small craft (class B)', group: 'Ships', color: '#a7b1bb', stroke: '#4a535c', rotate: true, scale: 0.6,
     codes: [], names: ['class b', 'small craft', 'tender'],
     body: hull({ top: 8.5, bottom: 24, hb: 3.6, bow: 5, r: 1.6 }),
     details: [`<rect x="13.8" y="16.2" width="4.4" height="4.4" rx="1.2" fill="${SOFT}"/>`],
@@ -214,7 +218,7 @@ export const ICONS = [
 
   // Not ships.
   {
-    key: 'aton', label: 'Aid to navigation (buoy)', group: 'Aids and stations', color: '#fcc419', stroke: '#5c4400', rotate: false,
+    key: 'aton', label: 'Aid to navigation (buoy)', group: 'Aids and stations', color: '#fcc419', stroke: '#5c4400', rotate: false, scale: 0.7,
     names: ['aid to navigation', 'aton', 'buoy', 'light vessel', 'lightship'],
     // A pillar buoy afloat: wide float, slim body, cone topmark, light.
     body: 'M8.6 22.6Q16 27 23.4 22.6L21.4 19.4H10.6Z M13.2 19.4L14.4 11H17.6L18.8 19.4Z',
@@ -228,7 +232,7 @@ export const ICONS = [
     haloExtra: `<path d="M13.8 8.6L16 4.8L18.2 8.6Z" stroke-width="3"/><path d="M6.4 26.6H25.4" stroke-width="4"/>`,
   },
   {
-    key: 'aton-fixed', label: 'Aid to navigation (fixed light or beacon)', group: 'Aids and stations', color: '#fcc419', stroke: '#5c4400', rotate: false,
+    key: 'aton-fixed', label: 'Aid to navigation (fixed light or beacon)', group: 'Aids and stations', color: '#fcc419', stroke: '#5c4400', rotate: false, scale: 0.75,
     names: ['lighthouse', 'beacon', 'fixed structure', 'racon', 'light'],
     body: 'M11.4 27.4L13.4 12.8H18.6L20.6 27.4Z M12.8 12.8V9.8H19.2V12.8Z M13.6 9.8L16 6.8L18.4 9.8Z',
     details: [
@@ -238,7 +242,7 @@ export const ICONS = [
     ],
   },
   {
-    key: 'aton-virtual', label: 'Virtual aid to navigation', group: 'Aids and stations', color: 'none', stroke: '#e8a200', rotate: false,
+    key: 'aton-virtual', label: 'Virtual aid to navigation', group: 'Aids and stations', color: 'none', stroke: '#e8a200', rotate: false, scale: 0.7,
     names: ['virtual aid', 'virtual aton', 'virtual'],
     body: 'M16 5.4L26.6 16L16 26.6L5.4 16Z',
     strokeWidth: 1.8,
@@ -249,7 +253,7 @@ export const ICONS = [
     ],
   },
   {
-    key: 'base-station', label: 'AIS base station', group: 'Aids and stations', color: '#3b5bdb', stroke: '#1c2f80', rotate: false,
+    key: 'base-station', label: 'AIS base station', group: 'Aids and stations', color: '#3b5bdb', stroke: '#1c2f80', rotate: false, scale: 0.8,
     names: ['base station', 'coast station', 'shore station'],
     body: 'M14.8 12.6H17.2L21.4 27.6H18.8L16 17.4L13.2 27.6H10.6Z',
     details: [
@@ -261,7 +265,7 @@ export const ICONS = [
     haloExtra: `<path d="M11.4 6.6Q9.4 10.6 11.4 14.6M20.6 6.6Q22.6 10.6 20.6 14.6M8.2 4.4Q5 10.6 8.2 16.8M23.8 4.4Q27 10.6 23.8 16.8" stroke-width="4" fill="none"/>`,
   },
   {
-    key: 'sar-aircraft', label: 'Search and rescue aircraft', group: 'Aids and stations', color: '#fd7e14', stroke: '#8a3c00', rotate: true,
+    key: 'sar-aircraft', label: 'Search and rescue aircraft', group: 'Aids and stations', color: '#fd7e14', stroke: '#8a3c00', rotate: true, scale: 0.75,
     names: ['sar aircraft', 'search and rescue aircraft', 'helicopter'],
     body: 'M16 3C17.1 3 17.6 4.2 17.6 5.6V11.8L27.6 17.2V19.6L17.6 17V23.6L21 26.2V28.2L16 27L11 28.2V26.2L14.4 23.6V17L4.4 19.6V17.2L14.4 11.8V5.6C14.4 4.2 14.9 3 16 3Z',
     details: [
@@ -270,7 +274,7 @@ export const ICONS = [
     ],
   },
   {
-    key: 'sart', label: 'AIS-SART (survival craft)', group: 'Emergency', color: '#f03e3e', stroke: '#7a0f0f', rotate: false,
+    key: 'sart', label: 'AIS-SART (survival craft)', group: 'Emergency', color: '#f03e3e', stroke: '#7a0f0f', rotate: false, scale: 0.8,
     names: ['sart', 'ais-sart', 'survival craft'],
     body: 'M16 6A10 10 0 1 1 15.99 6Z M16 9.6A6.4 6.4 0 1 0 16.01 9.6Z',
     details: [
@@ -279,7 +283,7 @@ export const ICONS = [
     ],
   },
   {
-    key: 'mob', label: 'Man overboard (MOB)', group: 'Emergency', color: '#f03e3e', stroke: '#7a0f0f', rotate: false,
+    key: 'mob', label: 'Man overboard (MOB)', group: 'Emergency', color: '#f03e3e', stroke: '#7a0f0f', rotate: false, scale: 0.8,
     names: ['mob', 'man overboard', 'person in water'],
     body: 'M16 5.4A10.6 10.6 0 1 1 15.99 5.4Z',
     details: [
@@ -290,7 +294,7 @@ export const ICONS = [
     ],
   },
   {
-    key: 'epirb', label: 'EPIRB (AIS distress beacon)', group: 'Emergency', color: '#f03e3e', stroke: '#7a0f0f', rotate: false,
+    key: 'epirb', label: 'EPIRB (AIS distress beacon)', group: 'Emergency', color: '#f03e3e', stroke: '#7a0f0f', rotate: false, scale: 0.8,
     names: ['epirb', 'distress beacon', 'plb'],
     body: 'M13 12.4H19V26.2Q19 27.6 17.6 27.6H14.4Q13 27.6 13 26.2Z M15.2 12.4V4.4H16.8V12.4Z',
     details: [

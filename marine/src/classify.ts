@@ -145,3 +145,16 @@ export async function loadMarineIconImages(
     ),
   );
 }
+
+/**
+ * Relative icon size (1 = a typical 100 m ship), for `icon-size` or a pixel
+ * size. Ships with a reported length (AIS dimensions to bow + to stern, in
+ * meters) are sized by it; others use their type's size.
+ */
+export function marineIconScale(key: MarineIconKey, lengthMeters?: number | null): number {
+  const icon = MARINE_ICONS[key];
+  if (icon?.rotate && key !== 'sar-aircraft' && lengthMeters != null && lengthMeters > 2 && lengthMeters < 600) {
+    return Math.min(1.4, Math.max(0.55, 0.25 + 0.4 * Math.log10(lengthMeters)));
+  }
+  return icon?.scale ?? 1;
+}

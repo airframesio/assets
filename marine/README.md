@@ -14,12 +14,21 @@ EPIRB). The set is original Airframes artwork.
 | `svg/<key>.svg` | One 32 x 32 SVG per icon, with a light halo so it reads on light, dark and satellite maps |
 | `marine-icons.ts` | The module apps copy: icon list with inline SVG, `marineIconKey()` classifier, `loadMarineIconImages()` for MapLibre/Mapbox `addImage` |
 | `marine-icons.js` | The same module as plain JavaScript (ES module) |
-| `marine-icons.json` | Keys, labels, colors, AIS type codes and rotate flags |
+| `marine-icons.json` | Keys, labels, colors, sizes, AIS type codes and rotate flags |
 | `sprite/marine[@2x].{png,json}` | Mapbox/MapLibre sprite sheets |
 | `preview.png` | Every icon on light and dark backgrounds |
 
 Ships and aircraft point north. Turn them by course over ground (or heading)
 when `rotate` is true; leave stations, aids and beacons upright.
+
+## Sizes
+
+Each icon has a `scale`, its size relative to a typical 100 m ship (a
+container ship is 1.25, a yacht 0.6). `marineIconScale(key, lengthMeters)`
+uses the ship's reported length (AIS dimension to bow plus to stern) instead
+when it is known, from 0.55 for small craft to 1.4 for the largest ships.
+Multiply the app's icon size by it. The sizes are not true ratios, only enough
+to show that some ships are bigger than others.
 
 ## Choosing an icon
 
@@ -64,10 +73,10 @@ when `rotate` is true; leave stations, aids and beacons upright.
 Copy `marine-icons.ts` (or `.js`) into the app. In MapLibre or Mapbox GL:
 
 ```ts
-import { loadMarineIconImages, marineIconKey, marineIconRotates } from './marine-icons';
+import { loadMarineIconImages, marineIconKey, marineIconRotates, marineIconScale } from './marine-icons';
 
 for (const [key, image] of await loadMarineIconImages(32, 2)) map.addImage(`marine-${key}`, image, { pixelRatio: 2 });
-// per feature: icon = `marine-${marineIconKey(v)}`, rotate = marineIconRotates(key) ? course : 0
+// per feature: icon = `marine-${key}`, size = 0.8 * marineIconScale(key, v.length), rotate = marineIconRotates(key) ? course : 0
 // layout: { 'icon-image': ['get', 'icon'], 'icon-rotate': ['get', 'rotate'], 'icon-rotation-alignment': 'map' }
 ```
 
