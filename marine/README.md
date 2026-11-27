@@ -77,7 +77,14 @@ wrapper with CSS.
 ## Changing the icons
 
 Edit `src/icons.mjs` (drawings, colors, codes) or `src/classify.ts` (the
-classifier), then run `node marine/src/build.mjs` (Node 22.13 or later;
-Playwright's Chromium for the PNGs) and copy `marine-icons.ts` to the apps
-again. The apps that use it: desktop-app, globe-solid, xng (dashboard and
+classifier), then run `node marine/src/build.mjs` (Node 22.13 or later) and
+copy `marine-icons.ts` to the apps again.
+
+The PNGs (sprites and preview) need the `playwright` npm package where Node
+can resolve it from `marine/src/` and its Chromium
+(`npm install --no-save playwright && npx playwright install chromium`).
+Without them the script still writes the SVG, JSON and modules, says it
+skipped the PNGs, and leaves the old PNGs in place.
+
+The apps that use it: desktop-app, globe-solid, xng (dashboard and
 desktop) and airwaves-os-control.

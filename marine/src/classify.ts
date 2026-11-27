@@ -58,7 +58,14 @@ export function marineIconKey(target: MarineTarget): MarineIconKey {
   const lower = raw.toLowerCase();
 
   // Aids to navigation: by message 21 fields, our "aton:" type, or MMSI.
-  if (target.messageType === 21 || lower.startsWith('aton') || byMmsi === 'aton') {
+  // Explicit aid fields win over the stored form, which wins over type text.
+  if (
+    target.messageType === 21 ||
+    target.aidType != null ||
+    target.virtual === true ||
+    lower.startsWith('aton') ||
+    byMmsi === 'aton'
+  ) {
     let aid = target.aidType ?? null;
     let virtual = target.virtual ?? null;
     if (lower.startsWith('aton')) {
@@ -66,6 +73,8 @@ export function marineIconKey(target: MarineTarget): MarineIconKey {
       const n = Number(parts[1]);
       if (aid == null && Number.isFinite(n) && parts[1] !== '') aid = n;
       if (virtual == null) virtual = parts.includes('virtual');
+    } else if (virtual == null && lower.includes('virtual')) {
+      virtual = true;
     }
     return atonKey(aid, virtual);
   }
@@ -82,6 +91,7 @@ export function marineIconKey(target: MarineTarget): MarineIconKey {
       for (const [name, key] of NAME_INDEX) {
         if (!lower.includes(name)) continue;
         if ((key === 'aton' || key === 'aton-fixed') && lower.includes('virtual')) return 'aton-virtual';
+        if (key === 'unknown') break; // "Not available": the class B fallback may still apply
         return key;
       }
     }
