@@ -1,15 +1,15 @@
 {
-  "version": "v0.2.14",
-  "notes": "- Messages: decode loadsheets, OOOI and ETA reports (acars-decoder 1.11)\n- Map icons for every marine target, aircraft type and balloon, sized by kind of craft\n- Map: map types, layer control, locate button and new icons",
-  "pub_date": "2026-11-27T18:01:53.087Z",
+  "version": "v0.2.15",
+  "notes": "- Stream ship and balloon positions on their pages and the map\n- Network stats: frequency usage, HFDL ground stations and ingest rates\n- Map: plot symbols, heading leaders and a key for Radar\n- Launch at login, and stations on this network with Claim\n- Account settings: API keys, notifications, email, connected accounts, security and billing\n- Edit your own stations and check Feeder Pro in the app\n- ATC: listen to air traffic control in Desktop",
+  "pub_date": "2026-11-27T18:44:41.039Z",
   "platforms": {
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTJEcUhuZlRTTlRCTUoxR2xUbHRLWkxleUR2NnZpZStHKy9Kb0FGeUxVbmJFZ2EyaW4yM09lcEtVMmQrci83bEhpdFRFT3EvV3p6TVV2OEg2WXcxa2dBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODAxOTUyCWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTQKQVlTUStJVVduL01VRjF4SW0zLzZHQTlLbXJuQUJta3ByL2pTN1BtSmJVWVRReXNvclNCbityT3RtZERDaGVYcjRuVHZVSkdqV3R1dkF5dWVtTjIwQUE9PQo=",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.14/Airframes_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTQ2ckxxQ0N3OU5YM2tlOWNHT01iK2Q2OXFlanNsVXY4NHNzdHcwQ3lHRXQzS2xVcG9YTlRDQlpYL2hwQU5mM21kb0R4eDF0aUNqZlMrczlxR0drZEFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODA0NDkwCWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTUKeHdNa0JWRFFkWWRZMzlDQ0Fab2VsdmtpUFZKL0xWZWlUSWtUbTAyMTd1d3hCbU9EL2M4Q3JXTDdUbHRWVW1iZ21UdGhFRmRKbm5ib3lLZ3FwNTY1QXc9PQo=",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.15/Airframes_universal.app.tar.gz"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTJEcUhuZlRTTlRCTUoxR2xUbHRLWkxleUR2NnZpZStHKy9Kb0FGeUxVbmJFZ2EyaW4yM09lcEtVMmQrci83bEhpdFRFT3EvV3p6TVV2OEg2WXcxa2dBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODAxOTUyCWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTQKQVlTUStJVVduL01VRjF4SW0zLzZHQTlLbXJuQUJta3ByL2pTN1BtSmJVWVRReXNvclNCbityT3RtZERDaGVYcjRuVHZVSkdqV3R1dkF5dWVtTjIwQUE9PQo=",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.14/Airframes_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTQ2ckxxQ0N3OU5YM2tlOWNHT01iK2Q2OXFlanNsVXY4NHNzdHcwQ3lHRXQzS2xVcG9YTlRDQlpYL2hwQU5mM21kb0R4eDF0aUNqZlMrczlxR0drZEFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODA0NDkwCWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTUKeHdNa0JWRFFkWWRZMzlDQ0Fab2VsdmtpUFZKL0xWZWlUSWtUbTAyMTd1d3hCbU9EL2M4Q3JXTDdUbHRWVW1iZ21UdGhFRmRKbm5ib3lLZ3FwNTY1QXc9PQo=",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.15/Airframes_universal.app.tar.gz"
     }
   }
 }
