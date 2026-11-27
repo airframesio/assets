@@ -1,0 +1,294 @@
+{
+  "version": 1,
+  "size": 32,
+  "icons": [
+    {
+      "key": "airliner",
+      "label": "Airliner (narrow-body)",
+      "group": "Airliners",
+      "color": "#2b6cd4",
+      "stroke": "#123a7a",
+      "rotate": true,
+      "scale": 1,
+      "balloon": false,
+      "adsb": [
+        "A3",
+        "A4"
+      ],
+      "file": "svg/airliner.svg"
+    },
+    {
+      "key": "widebody",
+      "label": "Wide-body twin",
+      "group": "Airliners",
+      "color": "#2b6cd4",
+      "stroke": "#123a7a",
+      "rotate": true,
+      "scale": 1.25,
+      "balloon": false,
+      "adsb": [
+        "A5"
+      ],
+      "file": "svg/widebody.svg"
+    },
+    {
+      "key": "quad",
+      "label": "Four-engine jet",
+      "group": "Airliners",
+      "color": "#2b6cd4",
+      "stroke": "#123a7a",
+      "rotate": true,
+      "scale": 1.4,
+      "balloon": false,
+      "adsb": [],
+      "file": "svg/quad.svg"
+    },
+    {
+      "key": "regional",
+      "label": "Regional jet",
+      "group": "Airliners",
+      "color": "#2b6cd4",
+      "stroke": "#123a7a",
+      "rotate": true,
+      "scale": 0.85,
+      "balloon": false,
+      "adsb": [],
+      "file": "svg/regional.svg"
+    },
+    {
+      "key": "turboprop",
+      "label": "Turboprop airliner",
+      "group": "Airliners",
+      "color": "#2b6cd4",
+      "stroke": "#123a7a",
+      "rotate": true,
+      "scale": 0.8,
+      "balloon": false,
+      "adsb": [],
+      "file": "svg/turboprop.svg"
+    },
+    {
+      "key": "bizjet",
+      "label": "Business jet",
+      "group": "General aviation",
+      "color": "#2b6cd4",
+      "stroke": "#123a7a",
+      "rotate": true,
+      "scale": 0.7,
+      "balloon": false,
+      "adsb": [],
+      "file": "svg/bizjet.svg"
+    },
+    {
+      "key": "light",
+      "label": "Light aircraft",
+      "group": "General aviation",
+      "color": "#2b6cd4",
+      "stroke": "#123a7a",
+      "rotate": true,
+      "scale": 0.6,
+      "balloon": false,
+      "adsb": [
+        "A1"
+      ],
+      "file": "svg/light.svg"
+    },
+    {
+      "key": "light-twin",
+      "label": "Light twin",
+      "group": "General aviation",
+      "color": "#2b6cd4",
+      "stroke": "#123a7a",
+      "rotate": true,
+      "scale": 0.65,
+      "balloon": false,
+      "adsb": [
+        "A2"
+      ],
+      "file": "svg/light-twin.svg"
+    },
+    {
+      "key": "glider",
+      "label": "Glider",
+      "group": "General aviation",
+      "color": "#2b6cd4",
+      "stroke": "#123a7a",
+      "rotate": true,
+      "scale": 0.65,
+      "balloon": false,
+      "adsb": [
+        "B1"
+      ],
+      "file": "svg/glider.svg"
+    },
+    {
+      "key": "ultralight",
+      "label": "Ultralight or hang glider",
+      "group": "General aviation",
+      "color": "#2b6cd4",
+      "stroke": "#123a7a",
+      "rotate": true,
+      "scale": 0.55,
+      "balloon": false,
+      "adsb": [
+        "B4"
+      ],
+      "file": "svg/ultralight.svg"
+    },
+    {
+      "key": "helicopter",
+      "label": "Helicopter",
+      "group": "Rotorcraft and other",
+      "color": "#2b6cd4",
+      "stroke": "#123a7a",
+      "rotate": true,
+      "scale": 0.7,
+      "balloon": false,
+      "adsb": [
+        "A7"
+      ],
+      "file": "svg/helicopter.svg"
+    },
+    {
+      "key": "drone",
+      "label": "Drone (UAV)",
+      "group": "Rotorcraft and other",
+      "color": "#7048e8",
+      "stroke": "#341b8f",
+      "rotate": true,
+      "scale": 0.5,
+      "balloon": false,
+      "adsb": [
+        "B6"
+      ],
+      "file": "svg/drone.svg"
+    },
+    {
+      "key": "airship",
+      "label": "Airship or blimp",
+      "group": "Rotorcraft and other",
+      "color": "#adb5bd",
+      "stroke": "#495057",
+      "rotate": true,
+      "scale": 0.9,
+      "balloon": false,
+      "adsb": [
+        "B2"
+      ],
+      "file": "svg/airship.svg"
+    },
+    {
+      "key": "fighter",
+      "label": "Fighter or fast jet",
+      "group": "Military",
+      "color": "#5f6f52",
+      "stroke": "#2b3424",
+      "rotate": true,
+      "scale": 0.75,
+      "balloon": false,
+      "adsb": [
+        "A6"
+      ],
+      "file": "svg/fighter.svg"
+    },
+    {
+      "key": "military-transport",
+      "label": "Military transport or patrol",
+      "group": "Military",
+      "color": "#5f6f52",
+      "stroke": "#2b3424",
+      "rotate": true,
+      "scale": 1.15,
+      "balloon": false,
+      "adsb": [],
+      "file": "svg/military-transport.svg"
+    },
+    {
+      "key": "ground-vehicle",
+      "label": "Airport ground vehicle",
+      "group": "Rotorcraft and other",
+      "color": "#f59f00",
+      "stroke": "#7a4f00",
+      "rotate": true,
+      "scale": 0.45,
+      "balloon": false,
+      "adsb": [
+        "C1",
+        "C2"
+      ],
+      "file": "svg/ground-vehicle.svg"
+    },
+    {
+      "key": "unknown",
+      "label": "Aircraft (type unknown)",
+      "group": "Rotorcraft and other",
+      "color": "#8c96a3",
+      "stroke": "#454d57",
+      "rotate": true,
+      "scale": 0.85,
+      "balloon": false,
+      "adsb": [],
+      "file": "svg/unknown.svg"
+    },
+    {
+      "key": "balloon",
+      "label": "Balloon (rising)",
+      "group": "Balloons",
+      "color": "#f76707",
+      "stroke": "#8a3500",
+      "rotate": false,
+      "scale": 0.8,
+      "balloon": true,
+      "adsb": [],
+      "file": "svg/balloon.svg"
+    },
+    {
+      "key": "parachute",
+      "label": "Balloon (falling, after burst)",
+      "group": "Balloons",
+      "color": "#f76707",
+      "stroke": "#8a3500",
+      "rotate": false,
+      "scale": 0.8,
+      "balloon": true,
+      "adsb": [],
+      "file": "svg/parachute.svg"
+    },
+    {
+      "key": "landed",
+      "label": "Balloon payload (landed)",
+      "group": "Balloons",
+      "color": "#2f9e44",
+      "stroke": "#495057",
+      "rotate": false,
+      "scale": 0.7,
+      "balloon": true,
+      "adsb": [],
+      "file": "svg/landed.svg"
+    },
+    {
+      "key": "burst",
+      "label": "Burst point",
+      "group": "Balloons",
+      "color": "#f76707",
+      "stroke": "#8a3500",
+      "rotate": false,
+      "scale": 0.6,
+      "balloon": true,
+      "adsb": [],
+      "file": "svg/burst.svg"
+    },
+    {
+      "key": "landing",
+      "label": "Predicted landing",
+      "group": "Balloons",
+      "color": "#f76707",
+      "stroke": "#8a3500",
+      "rotate": false,
+      "scale": 0.7,
+      "balloon": true,
+      "adsb": [],
+      "file": "svg/landing.svg"
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "cargo": {
+    "x": 0,
+    "y": 0,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "tanker": {
+    "x": 32,
+    "y": 0,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "passenger": {
+    "x": 64,
+    "y": 0,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "high-speed": {
+    "x": 96,
+    "y": 0,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "fishing": {
+    "x": 128,
+    "y": 0,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "tug": {
+    "x": 160,
+    "y": 0,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "pilot": {
+    "x": 192,
+    "y": 0,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "sar": {
+    "x": 224,
+    "y": 0,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "law": {
+    "x": 0,
+    "y": 32,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "military": {
+    "x": 32,
+    "y": 32,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "sailing": {
+    "x": 64,
+    "y": 32,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "pleasure": {
+    "x": 96,
+    "y": 32,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "special": {
+    "x": 128,
+    "y": 32,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "wig": {
+    "x": 160,
+    "y": 32,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "other": {
+    "x": 192,
+    "y": 32,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "unknown": {
+    "x": 224,
+    "y": 32,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "class-b": {
+    "x": 0,
+    "y": 64,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "aton": {
+    "x": 32,
+    "y": 64,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "aton-fixed": {
+    "x": 64,
+    "y": 64,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "aton-virtual": {
+    "x": 96,
+    "y": 64,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "base-station": {
+    "x": 128,
+    "y": 64,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "sar-aircraft": {
+    "x": 160,
+    "y": 64,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "sart": {
+    "x": 192,
+    "y": 64,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "mob": {
+    "x": 224,
+    "y": 64,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "epirb": {
+    "x": 0,
+    "y": 96,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  }
+}

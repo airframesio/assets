@@ -1,0 +1,492 @@
+{
+  "version": 1,
+  "size": 32,
+  "icons": [
+    {
+      "key": "cargo",
+      "label": "Cargo",
+      "group": "Ships",
+      "color": "#2f9e44",
+      "stroke": "#1b5e2a",
+      "rotate": true,
+      "scale": 1.25,
+      "codes": [
+        [
+          70,
+          79
+        ]
+      ],
+      "names": [
+        "cargo",
+        "container",
+        "bulk",
+        "reefer",
+        "vehicle carrier",
+        "ro-ro",
+        "general cargo"
+      ],
+      "file": "svg/cargo.svg"
+    },
+    {
+      "key": "tanker",
+      "label": "Tanker",
+      "group": "Ships",
+      "color": "#e03131",
+      "stroke": "#8f1d1d",
+      "rotate": true,
+      "scale": 1.25,
+      "codes": [
+        [
+          80,
+          89
+        ]
+      ],
+      "names": [
+        "tanker",
+        "lng",
+        "lpg",
+        "chemical",
+        "oil"
+      ],
+      "file": "svg/tanker.svg"
+    },
+    {
+      "key": "passenger",
+      "label": "Passenger",
+      "group": "Ships",
+      "color": "#1c7ed6",
+      "stroke": "#0f4c8a",
+      "rotate": true,
+      "scale": 1.15,
+      "codes": [
+        [
+          60,
+          69
+        ]
+      ],
+      "names": [
+        "passenger",
+        "ferry",
+        "cruise",
+        "ro-pax"
+      ],
+      "file": "svg/passenger.svg"
+    },
+    {
+      "key": "high-speed",
+      "label": "High speed craft",
+      "group": "Ships",
+      "color": "#f5b800",
+      "stroke": "#8a6400",
+      "rotate": true,
+      "scale": 0.85,
+      "codes": [
+        [
+          40,
+          49
+        ]
+      ],
+      "names": [
+        "high speed",
+        "hsc",
+        "hydrofoil"
+      ],
+      "file": "svg/high-speed.svg"
+    },
+    {
+      "key": "fishing",
+      "label": "Fishing",
+      "group": "Ships",
+      "color": "#f0794a",
+      "stroke": "#9c3f1a",
+      "rotate": true,
+      "scale": 0.75,
+      "codes": [
+        30
+      ],
+      "names": [
+        "fishing",
+        "trawler"
+      ],
+      "file": "svg/fishing.svg"
+    },
+    {
+      "key": "tug",
+      "label": "Tug and towing",
+      "group": "Ships",
+      "color": "#0ca678",
+      "stroke": "#065c42",
+      "rotate": true,
+      "scale": 0.65,
+      "codes": [
+        31,
+        32,
+        52
+      ],
+      "names": [
+        "tug",
+        "towing",
+        "tow"
+      ],
+      "file": "svg/tug.svg"
+    },
+    {
+      "key": "pilot",
+      "label": "Pilot",
+      "group": "Ships",
+      "color": "#ffffff",
+      "stroke": "#c92a2a",
+      "rotate": true,
+      "scale": 0.65,
+      "codes": [
+        50
+      ],
+      "names": [
+        "pilot"
+      ],
+      "file": "svg/pilot.svg"
+    },
+    {
+      "key": "sar",
+      "label": "Search and rescue",
+      "group": "Ships",
+      "color": "#fd7e14",
+      "stroke": "#a14a00",
+      "rotate": true,
+      "scale": 0.7,
+      "codes": [
+        51
+      ],
+      "names": [
+        "search and rescue",
+        "sar",
+        "rescue",
+        "lifeboat",
+        "coast guard"
+      ],
+      "file": "svg/sar.svg"
+    },
+    {
+      "key": "law",
+      "label": "Law enforcement",
+      "group": "Ships",
+      "color": "#1f3f99",
+      "stroke": "#0c1d4f",
+      "rotate": true,
+      "scale": 0.75,
+      "codes": [
+        55
+      ],
+      "names": [
+        "law enforcement",
+        "police",
+        "patrol",
+        "customs"
+      ],
+      "file": "svg/law.svg"
+    },
+    {
+      "key": "military",
+      "label": "Military",
+      "group": "Ships",
+      "color": "#66727f",
+      "stroke": "#2b323a",
+      "rotate": true,
+      "scale": 1.05,
+      "codes": [
+        35
+      ],
+      "names": [
+        "military",
+        "naval",
+        "navy",
+        "warship"
+      ],
+      "file": "svg/military.svg"
+    },
+    {
+      "key": "sailing",
+      "label": "Sailing",
+      "group": "Ships",
+      "color": "#7950f2",
+      "stroke": "#3d1f9e",
+      "rotate": true,
+      "scale": 0.65,
+      "codes": [
+        36
+      ],
+      "names": [
+        "sailing",
+        "sail",
+        "yacht"
+      ],
+      "file": "svg/sailing.svg"
+    },
+    {
+      "key": "pleasure",
+      "label": "Pleasure craft",
+      "group": "Ships",
+      "color": "#d6336c",
+      "stroke": "#7d1438",
+      "rotate": true,
+      "scale": 0.6,
+      "codes": [
+        37
+      ],
+      "names": [
+        "pleasure",
+        "motor yacht",
+        "recreational"
+      ],
+      "file": "svg/pleasure.svg"
+    },
+    {
+      "key": "special",
+      "label": "Special craft",
+      "group": "Ships",
+      "color": "#15aabf",
+      "stroke": "#0a5a66",
+      "rotate": true,
+      "scale": 0.85,
+      "codes": [
+        33,
+        34,
+        53,
+        54,
+        56,
+        57,
+        58,
+        59
+      ],
+      "names": [
+        "dredging",
+        "dredger",
+        "diving",
+        "port tender",
+        "anti-pollution",
+        "medical",
+        "research",
+        "survey",
+        "cable",
+        "buoy tender",
+        "icebreaker",
+        "special"
+      ],
+      "file": "svg/special.svg"
+    },
+    {
+      "key": "wig",
+      "label": "Wing in ground",
+      "group": "Ships",
+      "color": "#74b816",
+      "stroke": "#3b5e0b",
+      "rotate": true,
+      "scale": 0.7,
+      "codes": [
+        [
+          20,
+          29
+        ]
+      ],
+      "names": [
+        "wing in ground",
+        "wig",
+        "ekranoplan"
+      ],
+      "file": "svg/wig.svg"
+    },
+    {
+      "key": "other",
+      "label": "Other ship",
+      "group": "Ships",
+      "color": "#5c6670",
+      "stroke": "#22282e",
+      "rotate": true,
+      "scale": 0.9,
+      "codes": [
+        [
+          90,
+          99
+        ],
+        [
+          1,
+          19
+        ],
+        [
+          38,
+          39
+        ]
+      ],
+      "names": [
+        "other",
+        "reserved"
+      ],
+      "file": "svg/other.svg"
+    },
+    {
+      "key": "unknown",
+      "label": "Unknown type",
+      "group": "Ships",
+      "color": "#a7b1bb",
+      "stroke": "#4a535c",
+      "rotate": true,
+      "scale": 0.8,
+      "codes": [
+        0
+      ],
+      "names": [
+        "unknown",
+        "not available"
+      ],
+      "file": "svg/unknown.svg"
+    },
+    {
+      "key": "class-b",
+      "label": "Small craft (class B)",
+      "group": "Ships",
+      "color": "#a7b1bb",
+      "stroke": "#4a535c",
+      "rotate": true,
+      "scale": 0.6,
+      "codes": [],
+      "names": [
+        "class b",
+        "small craft",
+        "tender"
+      ],
+      "file": "svg/class-b.svg"
+    },
+    {
+      "key": "aton",
+      "label": "Aid to navigation (buoy)",
+      "group": "Aids and stations",
+      "color": "#fcc419",
+      "stroke": "#5c4400",
+      "rotate": false,
+      "scale": 0.7,
+      "codes": [],
+      "names": [
+        "aid to navigation",
+        "aton",
+        "buoy",
+        "light vessel",
+        "lightship"
+      ],
+      "file": "svg/aton.svg"
+    },
+    {
+      "key": "aton-fixed",
+      "label": "Aid to navigation (fixed light or beacon)",
+      "group": "Aids and stations",
+      "color": "#fcc419",
+      "stroke": "#5c4400",
+      "rotate": false,
+      "scale": 0.75,
+      "codes": [],
+      "names": [
+        "lighthouse",
+        "beacon",
+        "fixed structure",
+        "racon",
+        "light"
+      ],
+      "file": "svg/aton-fixed.svg"
+    },
+    {
+      "key": "aton-virtual",
+      "label": "Virtual aid to navigation",
+      "group": "Aids and stations",
+      "color": "none",
+      "stroke": "#e8a200",
+      "rotate": false,
+      "scale": 0.7,
+      "codes": [],
+      "names": [
+        "virtual aid",
+        "virtual aton",
+        "virtual"
+      ],
+      "file": "svg/aton-virtual.svg"
+    },
+    {
+      "key": "base-station",
+      "label": "AIS base station",
+      "group": "Aids and stations",
+      "color": "#3b5bdb",
+      "stroke": "#1c2f80",
+      "rotate": false,
+      "scale": 0.8,
+      "codes": [],
+      "names": [
+        "base station",
+        "coast station",
+        "shore station"
+      ],
+      "file": "svg/base-station.svg"
+    },
+    {
+      "key": "sar-aircraft",
+      "label": "Search and rescue aircraft",
+      "group": "Aids and stations",
+      "color": "#fd7e14",
+      "stroke": "#8a3c00",
+      "rotate": true,
+      "scale": 0.75,
+      "codes": [],
+      "names": [
+        "sar aircraft",
+        "search and rescue aircraft",
+        "helicopter"
+      ],
+      "file": "svg/sar-aircraft.svg"
+    },
+    {
+      "key": "sart",
+      "label": "AIS-SART (survival craft)",
+      "group": "Emergency",
+      "color": "#f03e3e",
+      "stroke": "#7a0f0f",
+      "rotate": false,
+      "scale": 0.8,
+      "codes": [],
+      "names": [
+        "sart",
+        "ais-sart",
+        "survival craft"
+      ],
+      "file": "svg/sart.svg"
+    },
+    {
+      "key": "mob",
+      "label": "Man overboard (MOB)",
+      "group": "Emergency",
+      "color": "#f03e3e",
+      "stroke": "#7a0f0f",
+      "rotate": false,
+      "scale": 0.8,
+      "codes": [],
+      "names": [
+        "mob",
+        "man overboard",
+        "person in water"
+      ],
+      "file": "svg/mob.svg"
+    },
+    {
+      "key": "epirb",
+      "label": "EPIRB (AIS distress beacon)",
+      "group": "Emergency",
+      "color": "#f03e3e",
+      "stroke": "#7a0f0f",
+      "rotate": false,
+      "scale": 0.8,
+      "codes": [],
+      "names": [
+        "epirb",
+        "distress beacon",
+        "plb"
+      ],
+      "file": "svg/epirb.svg"
+    }
+  ]
+}

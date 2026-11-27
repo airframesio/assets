@@ -1,0 +1,156 @@
+{
+  "airliner": {
+    "x": 0,
+    "y": 0,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "widebody": {
+    "x": 32,
+    "y": 0,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "quad": {
+    "x": 64,
+    "y": 0,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "regional": {
+    "x": 96,
+    "y": 0,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "turboprop": {
+    "x": 128,
+    "y": 0,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "bizjet": {
+    "x": 160,
+    "y": 0,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "light": {
+    "x": 192,
+    "y": 0,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "light-twin": {
+    "x": 224,
+    "y": 0,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "glider": {
+    "x": 0,
+    "y": 32,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "ultralight": {
+    "x": 32,
+    "y": 32,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "helicopter": {
+    "x": 64,
+    "y": 32,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "drone": {
+    "x": 96,
+    "y": 32,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "airship": {
+    "x": 128,
+    "y": 32,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "fighter": {
+    "x": 160,
+    "y": 32,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "military-transport": {
+    "x": 192,
+    "y": 32,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "ground-vehicle": {
+    "x": 224,
+    "y": 32,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "unknown": {
+    "x": 0,
+    "y": 64,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "balloon": {
+    "x": 32,
+    "y": 64,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "parachute": {
+    "x": 64,
+    "y": 64,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "landed": {
+    "x": 96,
+    "y": 64,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "burst": {
+    "x": 128,
+    "y": 64,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  },
+  "landing": {
+    "x": 160,
+    "y": 64,
+    "width": 32,
+    "height": 32,
+    "pixelRatio": 1
+  }
+}
