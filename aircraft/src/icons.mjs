@@ -275,7 +275,7 @@ export function iconSvg(icon, { size = 32, halo = true, template = false } = {})
   if (halo) {
     parts.push(
       `<g fill="#fff" stroke="#fff" stroke-linejoin="round" stroke-linecap="round" opacity="0.92">` +
-        bodies.map((b) => `<path d="${b.d}" stroke-width="${sw + 2.6}"/>`).join('') +
+        bodies.map((b) => `<path d="${b.d}"${rule} stroke-width="${sw + 2.6}"/>`).join('') +
         (icon.haloExtra ?? '') +
         `</g>`,
     );

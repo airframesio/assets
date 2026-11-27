@@ -77,7 +77,7 @@ import { loadMarineIconImages, marineIconKey, marineIconRotates, marineIconScale
 
 for (const [key, image] of await loadMarineIconImages(32, 2)) map.addImage(`marine-${key}`, image, { pixelRatio: 2 });
 // per feature: icon = `marine-${key}`, size = 0.8 * marineIconScale(key, v.length), rotate = marineIconRotates(key) ? course : 0
-// layout: { 'icon-image': ['get', 'icon'], 'icon-rotate': ['get', 'rotate'], 'icon-rotation-alignment': 'map' }
+// layout: { 'icon-image': ['get', 'icon'], 'icon-size': ['get', 'size'], 'icon-rotate': ['get', 'rotate'], 'icon-rotation-alignment': 'map' }
 ```
 
 In Leaflet, use `MARINE_ICONS[key].svg` in an `L.divIcon` and rotate the

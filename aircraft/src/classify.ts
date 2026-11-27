@@ -6,7 +6,7 @@ export interface AircraftTarget {
   /** ICAO aircraft type designator, such as "B738", "A359" or "H145". */
   type?: string | null;
   /** ADS-B emitter category: "A3", "B6", ... (also "a3" or the DO-260 set/number pair). */
-  category?: string | null;
+  category?: string | number | null;
   /** True for military aircraft; picks the military icons when the type is unknown. */
   military?: boolean | null;
 }
@@ -21,9 +21,9 @@ const TYPE_LIST: Record<string, string> = {
   // Four engines
   [Q]: 'B741 B742 B743 B744 B748 B74S B74F A342 A343 A345 A346 A380 A388 IL96 IL62 IL76 AN124 A124 AN225 A225 C17 C5 C5M B52 E3CF E3TF E6 E6B K35R KC35 RC35 C135 E767 B461 B462 B463 RJ70 RJ85 RJ1H VC10 A400 CONC',
   // Regional jets
-  [R]: 'CRJ1 CRJ2 CRJ7 CRJ9 CRJX E135 E145 E35L E170 E175 E190 E195 E290 E75L E75S F70 F100 SB20 ARJ2 AJ27 SU95 J328',
+  [R]: 'CRJ1 CRJ2 CRJ7 CRJ9 CRJX E135 E145 E35L E170 E175 E190 E195 E290 E75L E75S F70 F100 ARJ2 AJ27 SU95 J328',
   // Turboprop airliners
-  [T]: 'AT43 AT44 AT45 AT72 AT73 AT75 AT76 DH8A DH8B DH8C DH8D DHC6 DHC7 SF34 JS31 JS32 JS41 SW4 B190 BE99 L410 D228 D328 C212 CN35 C295 AN24 AN26 AN28 AN30 AN32 AN72 AN12 IL18 Y12 MA60 F50 F27 SH36 SB37 E120',
+  [T]: 'AT43 AT44 AT45 AT72 AT73 AT75 AT76 DH8A DH8B DH8C DH8D DHC6 DHC7 SF34 JS31 JS32 JS41 SW4 B190 BE99 L410 D228 D328 C212 CN35 C295 AN24 AN26 AN28 AN30 AN32 AN72 AN12 IL18 Y12 MA60 F50 F27 SH36 SB37 SB20 E120',
   // Business jets
   [J]: 'C25A C25B C25C C25M C500 C501 C510 C525 C550 C551 C55B C560 C56X C650 C680 C68A C700 C750 CL30 CL35 CL60 GL5T GL6T GL7T GL8T GLEX GLF2 GLF3 GLF4 GLF5 GLF6 GA5C GA6C GA7C GA8C GALX G150 G200 G280 LJ23 LJ24 LJ25 LJ28 LJ31 LJ35 LJ40 LJ45 LJ55 LJ60 LJ70 LJ75 FA10 FA20 FA50 FA6X FA7X FA8X F900 F2TH H25A H25B H25C HA4T E50P E55P E545 E550 PRM1 EA50 SF50 BE40 BE4W HDJT ASTR WW24 PC24',
   // Light singles (piston and single turboprop)
@@ -142,6 +142,7 @@ export async function loadAircraftIconImages(
 ): Promise<[AircraftIconKey, ImageData][]> {
   const { size = 32, pixelRatio = 2, fill, stroke } = options;
   const px = Math.round(size * pixelRatio);
+  if (!Number.isFinite(px) || px <= 0) throw new RangeError(`icon size must be positive, got ${size} x ${pixelRatio}`);
   const keys = options.keys ?? AIRCRAFT_ICON_LIST.map((i) => i.key);
   return Promise.all(
     keys.map(
@@ -149,13 +150,17 @@ export async function loadAircraftIconImages(
         new Promise<[AircraftIconKey, ImageData]>((resolve, reject) => {
           const img = new Image(px, px);
           img.onload = () => {
-            const canvas = document.createElement('canvas');
-            canvas.width = px;
-            canvas.height = px;
-            const ctx = canvas.getContext('2d');
-            if (!ctx) return reject(new Error('no 2d context'));
-            ctx.drawImage(img, 0, 0, px, px);
-            resolve([key, ctx.getImageData(0, 0, px, px)]);
+            try {
+              const canvas = document.createElement('canvas');
+              canvas.width = px;
+              canvas.height = px;
+              const ctx = canvas.getContext('2d');
+              if (!ctx) return reject(new Error('no 2d context'));
+              ctx.drawImage(img, 0, 0, px, px);
+              resolve([key, ctx.getImageData(0, 0, px, px)]);
+            } catch (err) {
+              reject(err);
+            }
           };
           img.onerror = () => reject(new Error(`could not draw ${key}`));
           img.src = aircraftIconDataUrl(key, fill, stroke);
