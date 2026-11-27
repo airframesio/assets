@@ -1,15 +1,15 @@
 {
-  "version": "v0.2.15",
-  "notes": "- Stream ship and balloon positions on their pages and the map\n- Network stats: frequency usage, HFDL ground stations and ingest rates\n- Map: plot symbols, heading leaders and a key for Radar\n- Launch at login, and stations on this network with Claim\n- Account settings: API keys, notifications, email, connected accounts, security and billing\n- Edit your own stations and check Feeder Pro in the app\n- ATC: listen to air traffic control in Desktop",
-  "pub_date": "2026-11-27T18:44:41.039Z",
+  "version": "v0.2.16",
+  "notes": "- Flight map: keep zoom and pan on refresh, add Follow and Fit path\n- Airlines, airline pages, station leaderboard and stations by country",
+  "pub_date": "2026-11-27T21:40:37.034Z",
   "platforms": {
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTQ2ckxxQ0N3OU5YM2tlOWNHT01iK2Q2OXFlanNsVXY4NHNzdHcwQ3lHRXQzS2xVcG9YTlRDQlpYL2hwQU5mM21kb0R4eDF0aUNqZlMrczlxR0drZEFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODA0NDkwCWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTUKeHdNa0JWRFFkWWRZMzlDQ0Fab2VsdmtpUFZKL0xWZWlUSWtUbTAyMTd1d3hCbU9EL2M4Q3JXTDdUbHRWVW1iZ21UdGhFRmRKbm5ib3lLZ3FwNTY1QXc9PQo=",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.15/Airframes_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dXhnN0o2cHFTN01xL0txSXBNZE9GRDcvbldzQ3orMnBKandWdzZJQXI0bjZQcHBEWTNvSVBvbnpjaHZSUlVwUzR6b1NtZFJZUzJKcmVLalJabW0xb0FzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODE1MzA4CWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTYKVmd0MFY3VE1vbVp3SlhJNlZsQjY1OUliV2t6eE5VejFzUVNyYVFsWmhIT1RXcmhFY2MxNjhhWDZJRXBXS3pKbXRJTVBUbE4xWnBTUkQ4M0dhOFgvQXc9PQo=",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.16/Airframes_universal.app.tar.gz"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTQ2ckxxQ0N3OU5YM2tlOWNHT01iK2Q2OXFlanNsVXY4NHNzdHcwQ3lHRXQzS2xVcG9YTlRDQlpYL2hwQU5mM21kb0R4eDF0aUNqZlMrczlxR0drZEFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODA0NDkwCWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTUKeHdNa0JWRFFkWWRZMzlDQ0Fab2VsdmtpUFZKL0xWZWlUSWtUbTAyMTd1d3hCbU9EL2M4Q3JXTDdUbHRWVW1iZ21UdGhFRmRKbm5ib3lLZ3FwNTY1QXc9PQo=",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.15/Airframes_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dXhnN0o2cHFTN01xL0txSXBNZE9GRDcvbldzQ3orMnBKandWdzZJQXI0bjZQcHBEWTNvSVBvbnpjaHZSUlVwUzR6b1NtZFJZUzJKcmVLalJabW0xb0FzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODE1MzA4CWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTYKVmd0MFY3VE1vbVp3SlhJNlZsQjY1OUliV2t6eE5VejFzUVNyYVFsWmhIT1RXcmhFY2MxNjhhWDZJRXBXS3pKbXRJTVBUbE4xWnBTUkQ4M0dhOFgvQXc9PQo=",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.16/Airframes_universal.app.tar.gz"
     }
   }
 }

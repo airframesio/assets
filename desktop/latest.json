@@ -1,51 +1,51 @@
 {
-  "version": "0.2.15",
-  "notes": "- Stream ship and balloon positions on their pages and the map\n- Network stats: frequency usage, HFDL ground stations and ingest rates\n- Map: plot symbols, heading leaders and a key for Radar\n- Launch at login, and stations on this network with Claim\n- Account settings: API keys, notifications, email, connected accounts, security and billing\n- Edit your own stations and check Feeder Pro in the app\n- ATC: listen to air traffic control in Desktop",
-  "pub_date": "2026-11-27T18:44:41.039Z",
+  "version": "0.2.16",
+  "notes": "- Flight map: keep zoom and pan on refresh, add Follow and Fit path\n- Airlines, airline pages, station leaderboard and stations by country",
+  "pub_date": "2026-11-27T21:40:37.034Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTQ2ckxxQ0N3OU5YM2tlOWNHT01iK2Q2OXFlanNsVXY4NHNzdHcwQ3lHRXQzS2xVcG9YTlRDQlpYL2hwQU5mM21kb0R4eDF0aUNqZlMrczlxR0drZEFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODA0NDkwCWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTUKeHdNa0JWRFFkWWRZMzlDQ0Fab2VsdmtpUFZKL0xWZWlUSWtUbTAyMTd1d3hCbU9EL2M4Q3JXTDdUbHRWVW1iZ21UdGhFRmRKbm5ib3lLZ3FwNTY1QXc9PQo=",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.15/Airframes_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dXhnN0o2cHFTN01xL0txSXBNZE9GRDcvbldzQ3orMnBKandWdzZJQXI0bjZQcHBEWTNvSVBvbnpjaHZSUlVwUzR6b1NtZFJZUzJKcmVLalJabW0xb0FzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODE1MzA4CWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTYKVmd0MFY3VE1vbVp3SlhJNlZsQjY1OUliV2t6eE5VejFzUVNyYVFsWmhIT1RXcmhFY2MxNjhhWDZJRXBXS3pKbXRJTVBUbE4xWnBTUkQ4M0dhOFgvQXc9PQo=",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.16/Airframes_universal.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTQ2ckxxQ0N3OU5YM2tlOWNHT01iK2Q2OXFlanNsVXY4NHNzdHcwQ3lHRXQzS2xVcG9YTlRDQlpYL2hwQU5mM21kb0R4eDF0aUNqZlMrczlxR0drZEFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODA0NDkwCWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTUKeHdNa0JWRFFkWWRZMzlDQ0Fab2VsdmtpUFZKL0xWZWlUSWtUbTAyMTd1d3hCbU9EL2M4Q3JXTDdUbHRWVW1iZ21UdGhFRmRKbm5ib3lLZ3FwNTY1QXc9PQo=",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.15/Airframes_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dXhnN0o2cHFTN01xL0txSXBNZE9GRDcvbldzQ3orMnBKandWdzZJQXI0bjZQcHBEWTNvSVBvbnpjaHZSUlVwUzR6b1NtZFJZUzJKcmVLalJabW0xb0FzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODE1MzA4CWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTYKVmd0MFY3VE1vbVp3SlhJNlZsQjY1OUliV2t6eE5VejFzUVNyYVFsWmhIT1RXcmhFY2MxNjhhWDZJRXBXS3pKbXRJTVBUbE4xWnBTUkQ4M0dhOFgvQXc9PQo=",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.16/Airframes_universal.app.tar.gz"
     },
     "darwin-aarch64-app": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTQ2ckxxQ0N3OU5YM2tlOWNHT01iK2Q2OXFlanNsVXY4NHNzdHcwQ3lHRXQzS2xVcG9YTlRDQlpYL2hwQU5mM21kb0R4eDF0aUNqZlMrczlxR0drZEFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODA0NDkwCWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTUKeHdNa0JWRFFkWWRZMzlDQ0Fab2VsdmtpUFZKL0xWZWlUSWtUbTAyMTd1d3hCbU9EL2M4Q3JXTDdUbHRWVW1iZ21UdGhFRmRKbm5ib3lLZ3FwNTY1QXc9PQo=",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.15/Airframes_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dXhnN0o2cHFTN01xL0txSXBNZE9GRDcvbldzQ3orMnBKandWdzZJQXI0bjZQcHBEWTNvSVBvbnpjaHZSUlVwUzR6b1NtZFJZUzJKcmVLalJabW0xb0FzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODE1MzA4CWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTYKVmd0MFY3VE1vbVp3SlhJNlZsQjY1OUliV2t6eE5VejFzUVNyYVFsWmhIT1RXcmhFY2MxNjhhWDZJRXBXS3pKbXRJTVBUbE4xWnBTUkQ4M0dhOFgvQXc9PQo=",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.16/Airframes_universal.app.tar.gz"
     },
     "darwin-x86_64-app": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTQ2ckxxQ0N3OU5YM2tlOWNHT01iK2Q2OXFlanNsVXY4NHNzdHcwQ3lHRXQzS2xVcG9YTlRDQlpYL2hwQU5mM21kb0R4eDF0aUNqZlMrczlxR0drZEFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODA0NDkwCWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTUKeHdNa0JWRFFkWWRZMzlDQ0Fab2VsdmtpUFZKL0xWZWlUSWtUbTAyMTd1d3hCbU9EL2M4Q3JXTDdUbHRWVW1iZ21UdGhFRmRKbm5ib3lLZ3FwNTY1QXc9PQo=",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.15/Airframes_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dXhnN0o2cHFTN01xL0txSXBNZE9GRDcvbldzQ3orMnBKandWdzZJQXI0bjZQcHBEWTNvSVBvbnpjaHZSUlVwUzR6b1NtZFJZUzJKcmVLalJabW0xb0FzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODE1MzA4CWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTYKVmd0MFY3VE1vbVp3SlhJNlZsQjY1OUliV2t6eE5VejFzUVNyYVFsWmhIT1RXcmhFY2MxNjhhWDZJRXBXS3pKbXRJTVBUbE4xWnBTUkQ4M0dhOFgvQXc9PQo=",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.16/Airframes_universal.app.tar.gz"
     },
     "linux-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dXd0Z1JKU0lNcU1XVzR2RlJYRHk2b1NEMElOUkVwL0xDaVRUeXVoNi9lSHIvbUJwaVM5VGoxY1lLK1ZnbW5YSithRzlib3pkdnRpSCtaVnA1WVFGYnc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODA0NjIwCWZpbGU6QWlyZnJhbWVzXzAuMi4xNV9hbWQ2NC5BcHBJbWFnZQl2ZXJzaW9uOjAuMi4xNQpYYnFkVGFDVnRkVmloTHEvNkU5VUUzWU44amE4MnNjK2g5VHNtaGJWeTV5OWw2Zjd3blBkZXdDUzJsTGpERzJ4a0d1citHb3VnRFREN3FmY3RObjJDdz09Cg==",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.15/Airframes_0.2.15_amd64.AppImage"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dS9VQyt1YlhiWEpVRnNyZ2pCQW1ra29VV0ZCcWE3R085VWN5V0s3eTRUSFE0cEZReTIycmo5SllRYzFKeTE3L0hXb3R4Y2IzdWNLSCtwYnVuWExpR3drPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODE1MzYzCWZpbGU6QWlyZnJhbWVzXzAuMi4xNl9hbWQ2NC5BcHBJbWFnZQl2ZXJzaW9uOjAuMi4xNgppZktPM29LNzhGN3AyNUJSaEJXM3N4dTJHd0FaTzRPcmtYUFkyd1Z0Y1pvQ0hnTk84ekgvQng4M2gyWmxEdG1DN3drUVA1dDFjZE5aTm9YejE2ZjVCUT09Cg==",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.16/Airframes_0.2.16_amd64.AppImage"
     },
     "linux-x86_64-appimage": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dXd0Z1JKU0lNcU1XVzR2RlJYRHk2b1NEMElOUkVwL0xDaVRUeXVoNi9lSHIvbUJwaVM5VGoxY1lLK1ZnbW5YSithRzlib3pkdnRpSCtaVnA1WVFGYnc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODA0NjIwCWZpbGU6QWlyZnJhbWVzXzAuMi4xNV9hbWQ2NC5BcHBJbWFnZQl2ZXJzaW9uOjAuMi4xNQpYYnFkVGFDVnRkVmloTHEvNkU5VUUzWU44amE4MnNjK2g5VHNtaGJWeTV5OWw2Zjd3blBkZXdDUzJsTGpERzJ4a0d1citHb3VnRFREN3FmY3RObjJDdz09Cg==",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.15/Airframes_0.2.15_amd64.AppImage"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dS9VQyt1YlhiWEpVRnNyZ2pCQW1ra29VV0ZCcWE3R085VWN5V0s3eTRUSFE0cEZReTIycmo5SllRYzFKeTE3L0hXb3R4Y2IzdWNLSCtwYnVuWExpR3drPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODE1MzYzCWZpbGU6QWlyZnJhbWVzXzAuMi4xNl9hbWQ2NC5BcHBJbWFnZQl2ZXJzaW9uOjAuMi4xNgppZktPM29LNzhGN3AyNUJSaEJXM3N4dTJHd0FaTzRPcmtYUFkyd1Z0Y1pvQ0hnTk84ekgvQng4M2gyWmxEdG1DN3drUVA1dDFjZE5aTm9YejE2ZjVCUT09Cg==",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.16/Airframes_0.2.16_amd64.AppImage"
     },
     "linux-x86_64-deb": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dS9QTjdaNHpMZUNsYTFJNGU3SEFOY1c1akJFeGs2eE9CU2Yzald0dkJISGsrME1jQXVGTjRzdTVWelZjamZBU0JqTXczRGZ5LzlkYkNSR1RhbU9vWHdJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODA0NjIwCWZpbGU6QWlyZnJhbWVzXzAuMi4xNV9hbWQ2NC5kZWIJdmVyc2lvbjowLjIuMTUKeitaQWQ5dHZsUEdseHpyWitEeFVrbWVEZXBnVnAveDdJTFVsSEtDalAyVVJiZTZmOGlNeVFJSnp2MDFIVlV4WTlvNHBRYllsZlc0aE5vbS9PcHZLQ1E9PQo=",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.15/Airframes_0.2.15_amd64.deb"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTFaQk9UYmd6cWx4dzVVN2w0YUhiUm5WVmN5ZGlzRnQ4azhhc3ljZXpMc00rSUlISmhwekFuQnJibk15OFNDbm1xRUs3M3VrM1JYVFR5cW5SaUhSMHdBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODE1MzYzCWZpbGU6QWlyZnJhbWVzXzAuMi4xNl9hbWQ2NC5kZWIJdmVyc2lvbjowLjIuMTYKZ0dRZEp6TkY5b1NWL2FBUnpSRm8wREJqVGZkUzNHMjlsWXNHd2ZTMDlveDNVdDJYQllZaXMrRk1Fc2dJSEtWYTlaZG9EcW9YbVBhQmtMM0lMaHBsRHc9PQo=",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.16/Airframes_0.2.16_amd64.deb"
     },
     "linux-x86_64-rpm": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTZKMW9XUWJSWGFDamJEemp4M0FvSm16T3FyZEJ1Q1FNUno4cWdjdm45bjl3QWY4WjdlZFJRZEQ1SkdQNTAwdVI0OHZ4c0pONlptN0Y5c01zaGRPeXd3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODA0NjIwCWZpbGU6QWlyZnJhbWVzLTAuMi4xNS0xLng4Nl82NC5ycG0JdmVyc2lvbjowLjIuMTUKamc5Z3Vmc1ladWgwalhybkRSbm9KdGlib0RzNlRPcW1wL2NlRERjL2hWaThFclEvMVZtS0x5OE45dmNjOXo2Z21ZbU82VEFkWm0vR1phMjY2UkI1QWc9PQo=",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.15/Airframes-0.2.15-1.x86_64.rpm"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dSt3TnhFd25pcmpGdmRWcS9Vcnk3RWVlYVRkbEdIdklXaWgrWmE3R05xbmlRL2pwajY3TUt3aktuR1ErS0hCYnRJU3BReDkvWTZyNE1yeEo1NTJZQUFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODE1MzYzCWZpbGU6QWlyZnJhbWVzLTAuMi4xNi0xLng4Nl82NC5ycG0JdmVyc2lvbjowLjIuMTYKVGZkSGhlcWRpYlkveStLNkFtaEFjZzZKRE9RdmVkcFU0WlJNNnhOVU9jNGJQbUxRVlZFeVlQL25MMjlWdWgyTllsOGU4enpudVo4eko4ZWNGakJ1Qmc9PQo=",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.16/Airframes-0.2.16-1.x86_64.rpm"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dXg0cTlRMitDOXlRWGZJbWdIdEprcXQzelphc1l2MnJRQzZXU3h4UC9QWmNRZ3pDenRoN2xYY3dMTG5Wcjd3UC9PWmJQZGtGSW9laCs2dGMyYjdTdGdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODA1MDc0CWZpbGU6QWlyZnJhbWVzXzAuMi4xNV94NjRfZW4tVVMubXNpCXZlcnNpb246MC4yLjE1CndndTFVWWRtaXF1eHNEclB4dzMwWGh3NFp6QkQwMVZOclcyUXQrVVFWK3AwcWhBamw1OEJha2dkRHcwbmdzcmhkZHNGc0EzZGM4bHhCQk1iSUgzQ0RnPT0K",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.15/Airframes_0.2.15_x64_en-US.msi"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dXhYQU1QYUg2eVdMVktpVzZTd2EyUWNGMzNBUURlNjIzMWl4MkltMmZOMVJDOHV0K3lpNXA5cWhWTGdqOUZtVTA1eHN4VERwZE5IcDdadE1KYnk4Y2djPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODE1NjMxCWZpbGU6QWlyZnJhbWVzXzAuMi4xNl94NjRfZW4tVVMubXNpCXZlcnNpb246MC4yLjE2Cm0xS3lWQzVaWGpndWhTZzRFWkRPZlVmcW9OZkRiTC9CSXZpdFI5Snk1a1FzbzY3WVJYeEhrVVJMK25aYVNvTnZCNEdQeERBZVJ1Nk5qY1JVelhrakJ3PT0K",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.16/Airframes_0.2.16_x64_en-US.msi"
     },
     "windows-x86_64-msi": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dXg0cTlRMitDOXlRWGZJbWdIdEprcXQzelphc1l2MnJRQzZXU3h4UC9QWmNRZ3pDenRoN2xYY3dMTG5Wcjd3UC9PWmJQZGtGSW9laCs2dGMyYjdTdGdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODA1MDc0CWZpbGU6QWlyZnJhbWVzXzAuMi4xNV94NjRfZW4tVVMubXNpCXZlcnNpb246MC4yLjE1CndndTFVWWRtaXF1eHNEclB4dzMwWGh3NFp6QkQwMVZOclcyUXQrVVFWK3AwcWhBamw1OEJha2dkRHcwbmdzcmhkZHNGc0EzZGM4bHhCQk1iSUgzQ0RnPT0K",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.15/Airframes_0.2.15_x64_en-US.msi"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dXhYQU1QYUg2eVdMVktpVzZTd2EyUWNGMzNBUURlNjIzMWl4MkltMmZOMVJDOHV0K3lpNXA5cWhWTGdqOUZtVTA1eHN4VERwZE5IcDdadE1KYnk4Y2djPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODE1NjMxCWZpbGU6QWlyZnJhbWVzXzAuMi4xNl94NjRfZW4tVVMubXNpCXZlcnNpb246MC4yLjE2Cm0xS3lWQzVaWGpndWhTZzRFWkRPZlVmcW9OZkRiTC9CSXZpdFI5Snk1a1FzbzY3WVJYeEhrVVJMK25aYVNvTnZCNEdQeERBZVJ1Nk5qY1JVelhrakJ3PT0K",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.16/Airframes_0.2.16_x64_en-US.msi"
     },
     "windows-x86_64-nsis": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTdkM3BZdnZKN2V6N2IzcWRjYU1HTytOZVIxTEtVdWMycXdDTGZwQUIzeTFPQWhwWVBORitNaGFldXBDY3RiQ1RKMU1oNmM2Rm5leXpmczlaYUdaY0FzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODA1MDc0CWZpbGU6QWlyZnJhbWVzXzAuMi4xNV94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4yLjE1CmFGQzhUMTF3WTcrNlltRzNmbEpNMUVBRHd1SnRXdFhhUm50T0Y2Z1hWVDYzVS9ONlVrQzRXakVGcjZjK1dpQ1k4REhwUm1DTEhIR2txcVE4N0pjVUN3PT0K",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.15/Airframes_0.2.15_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dStsbWFHdUQyWHFNSWxwU0ZMM2F4MEdvMXl0QmpoV3AvTllQamo3RlByOE8yTHJkRHVWd1dDU1V2dTlWMmExV2RQMjdqbU9vNVJhNXF6bnJFbzcyM2dBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODE1NjMxCWZpbGU6QWlyZnJhbWVzXzAuMi4xNl94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4yLjE2CkR6MVM1eWQ5L0EwcUxjMGlKRkh3U1N0V1BhVWl2ckUrNUZjTW9tMGpFWmxwa2JkZTcraW1xUlNxajhCOWN4YmllUEp1UTNqYXBXdTlZTW9PYTQ2TERRPT0K",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.16/Airframes_0.2.16_x64-setup.exe"
     }
   }
 }
