@@ -1,15 +1,15 @@
 {
-  "version": "v0.2.11",
-  "notes": "- Feel native: app context menus, no web drags, previews or browser shortcuts\n- Phone flight list: pick the details each row shows\n- Use the whole window and level the sidebar button with the traffic lights\n- Release notes: leave out release, bump and mobile build commits\n- Flights: more columns and a Columns picker\n- Map: draw the selected aircraft, ship or balloon's path and keep it live\n- Flights: hide the Source column when no flight has a source",
-  "pub_date": "2026-11-27T08:15:27.318Z",
+  "version": "v0.2.12",
+  "notes": "- A few more small UI touches\n- More small UI touches\n- Phones: haptics, iOS swipe back, share sheet and fewer web-isms",
+  "pub_date": "2026-11-27T08:56:02.131Z",
   "platforms": {
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTRQN0ZjQ2cweUxybFozblJkRmlNNEk4ZzRUWlp1K3RoQU1QRE5VK0JocjhLYkp6M0RUY0dRbGcwbW9tRWFMMUFFLzcxWUpiSUdhOHlSNnZOV3RYZUE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NzY3MzIxCWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTEKTEQzTzgvUXJsbDVHKzNSTSsvQ2luRmV5cXBpYmw5blJQbXVTdUMwcXpYT3J2OU5GaXRNZ2tJRDJmeXNoMUZpSXE3Wm03K3lTNVQ1QjZqRThNTGFORHc9PQo=",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.11/Airframes_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTh0TXJIMEVrQy9SSDZiTTdHSCtsbVFobGtvcWNYdGxPNVN3VmF0US9zTTJRRG1kUVRJaW9KL1ZiZ0RhUlkrRlVtb1Zvekw1MFY4aUYyamFYaFlVZ0FRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NzY5NDM2CWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTIKRTZucWtLcmhMR2hWSWJoODhSS2E1R292dEE1VXZiY2pJYmp5MkI0MGN0TTNLMTZhSVpSL3pvVDJEQk4vSU0yZWxMbHYycUxBTFdyOXZ1dkNZOU5vQkE9PQo=",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.12/Airframes_universal.app.tar.gz"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTRQN0ZjQ2cweUxybFozblJkRmlNNEk4ZzRUWlp1K3RoQU1QRE5VK0JocjhLYkp6M0RUY0dRbGcwbW9tRWFMMUFFLzcxWUpiSUdhOHlSNnZOV3RYZUE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NzY3MzIxCWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTEKTEQzTzgvUXJsbDVHKzNSTSsvQ2luRmV5cXBpYmw5blJQbXVTdUMwcXpYT3J2OU5GaXRNZ2tJRDJmeXNoMUZpSXE3Wm03K3lTNVQ1QjZqRThNTGFORHc9PQo=",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.11/Airframes_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTh0TXJIMEVrQy9SSDZiTTdHSCtsbVFobGtvcWNYdGxPNVN3VmF0US9zTTJRRG1kUVRJaW9KL1ZiZ0RhUlkrRlVtb1Zvekw1MFY4aUYyamFYaFlVZ0FRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NzY5NDM2CWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTIKRTZucWtLcmhMR2hWSWJoODhSS2E1R292dEE1VXZiY2pJYmp5MkI0MGN0TTNLMTZhSVpSL3pvVDJEQk4vSU0yZWxMbHYycUxBTFdyOXZ1dkNZOU5vQkE9PQo=",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.12/Airframes_universal.app.tar.gz"
     }
   }
 }
