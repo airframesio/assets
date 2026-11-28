@@ -34,8 +34,17 @@ export function iconZoomFactor(zoom: number): number {
   return s[s.length - 1][1];
 }
 
-/** Share of the 32 px image that the drawing spans (wingtip to wingtip, bow to stern). */
+/**
+ * Share of the 32 px image that `meters` covers in the true-size helpers.
+ * aircraftSizeMeters() and marineSizeMeters() scale each craft's real size by
+ * its icon's own drawn span, so the drawing itself covers the real size.
+ */
 export const ICON_DRAWN_SHARE = 0.85;
+
+/** Real meters scaled so a drawing `span` grid units wide covers them at ICON_DRAWN_SHARE. */
+function drawnMeters(meters: number, span: number | undefined): number {
+  return span && span > 1 ? (meters * 32 * ICON_DRAWN_SHARE) / span : meters;
+}
 
 const EARTH_CIRCUMFERENCE = 40075016.686;
 
@@ -76,7 +85,7 @@ export function iconSizeExpression(
   const scale = ['coalesce', ['get', scaleProp], 1];
   const meters = ['coalesce', ['get', metersProp], 0];
   const stops: unknown[] = [];
-  const zooms = [...ICON_ZOOM_STOPS.map(([z]) => z).filter((z) => z < 12), 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22];
+  const zooms = [...ICON_ZOOM_STOPS.map(([z]) => z).filter((z) => z < 12), 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
   for (const z of zooms) {
     const zoomed = ['*', +(base * iconZoomFactor(z)).toFixed(4), scale];
     if (!trueSize || z < 12) {

@@ -16,6 +16,8 @@ export interface AircraftIcon {
   rotate: boolean;
   /** Size relative to a narrow-body airliner (1). */
   scale: number;
+  /** The drawing's wingspan (width) on the 32 x 32 grid, for true-size drawing. */
+  span: number;
   /** Balloon icons keep their own colors. */
   balloon: boolean;
   /** ADS-B emitter categories that select this icon when the type is unknown. */
@@ -34,6 +36,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#2b6cd4',
     rotate: true,
     scale: 1,
+    span: 25.2,
     balloon: false,
     adsb: ["A3","A4"],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M16 1.6L16.9 2.3L17.5 3.8L17.7 6L17.7 11.4L28.6 17.4L28.6 19L17.7 16.4L17.6 24.2L22 27.4L22 28.8L17.2 27.9L16.6 30L16 30.4L15.4 30L14.8 27.9L10 28.8L10 27.4L14.4 24.2L14.3 16.4L3.4 19L3.4 17.4L14.3 11.4L14.3 6L14.5 3.8L15.1 2.3Z\" stroke-width=\"2.5\"/><path d=\"M21.7 12.4H21.9Q22.7 12.4 22.7 13.2V15.6Q22.7 16.4 21.9 16.4H21.7Q20.9 16.4 20.9 15.6V13.2Q20.9 12.4 21.7 12.4ZM10.1 12.4H10.3Q11.1 12.4 11.1 13.2V15.6Q11.1 16.4 10.3 16.4H10.1Q9.3 16.4 9.3 15.6V13.2Q9.3 12.4 10.1 12.4Z\" stroke-width=\"2.5\"/></g><path d=\"M16 1.6L16.9 2.3L17.5 3.8L17.7 6L17.7 11.4L28.6 17.4L28.6 19L17.7 16.4L17.6 24.2L22 27.4L22 28.8L17.2 27.9L16.6 30L16 30.4L15.4 30L14.8 27.9L10 28.8L10 27.4L14.4 24.2L14.3 16.4L3.4 19L3.4 17.4L14.3 11.4L14.3 6L14.5 3.8L15.1 2.3Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M21.7 12.4H21.9Q22.7 12.4 22.7 13.2V15.6Q22.7 16.4 21.9 16.4H21.7Q20.9 16.4 20.9 15.6V13.2Q20.9 12.4 21.7 12.4ZM10.1 12.4H10.3Q11.1 12.4 11.1 13.2V15.6Q11.1 16.4 10.3 16.4H10.1Q9.3 16.4 9.3 15.6V13.2Q9.3 12.4 10.1 12.4Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M15 4.9Q16 4.1000000000000005 17 4.9\" stroke=\"rgba(0,0,0,0.3)\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/></svg>",
@@ -46,6 +49,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#2b6cd4',
     rotate: true,
     scale: 1.25,
+    span: 28.8,
     balloon: false,
     adsb: ["A5"],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M16 1.2L17.3 1.9L18 3.6L18.2 6L18.2 11.6L30.4 18.6L30.4 20.2L18.2 17L18.1 24.4L23.6 28L23.6 29.4L17.6 28.4L16.8 30.6L16 30.9L15.2 30.6L14.4 28.4L8.4 29.4L8.4 28L13.9 24.4L13.8 17L1.6 20.2L1.6 18.6L13.8 11.6L13.8 6L14 3.6L14.7 1.9Z\" stroke-width=\"2.5\"/><path d=\"M22.4 12.2H22.6Q23.6 12.2 23.6 13.2V16Q23.6 17 22.6 17H22.4Q21.4 17 21.4 16V13.2Q21.4 12.2 22.4 12.2ZM9.4 12.2H9.6Q10.6 12.2 10.6 13.2V16Q10.6 17 9.6 17H9.4Q8.4 17 8.4 16V13.2Q8.4 12.2 9.4 12.2Z\" stroke-width=\"2.5\"/></g><path d=\"M16 1.2L17.3 1.9L18 3.6L18.2 6L18.2 11.6L30.4 18.6L30.4 20.2L18.2 17L18.1 24.4L23.6 28L23.6 29.4L17.6 28.4L16.8 30.6L16 30.9L15.2 30.6L14.4 28.4L8.4 29.4L8.4 28L13.9 24.4L13.8 17L1.6 20.2L1.6 18.6L13.8 11.6L13.8 6L14 3.6L14.7 1.9Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M22.4 12.2H22.6Q23.6 12.2 23.6 13.2V16Q23.6 17 22.6 17H22.4Q21.4 17 21.4 16V13.2Q21.4 12.2 22.4 12.2ZM9.4 12.2H9.6Q10.6 12.2 10.6 13.2V16Q10.6 17 9.6 17H9.4Q8.4 17 8.4 16V13.2Q8.4 12.2 9.4 12.2Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M14.8 4.3Q16 3.5 17.2 4.3\" stroke=\"rgba(0,0,0,0.3)\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/></svg>",
@@ -58,6 +62,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#2b6cd4',
     rotate: true,
     scale: 1.4,
+    span: 28.8,
     balloon: false,
     adsb: [],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M16 1.2L17.3 1.9L18 3.6L18.2 6L18.2 11.6L30.4 18.6L30.4 20.2L18.2 17L18.1 24.4L23.6 28L23.6 29.4L17.6 28.4L16.8 30.6L16 30.9L15.2 30.6L14.4 28.4L8.4 29.4L8.4 28L13.9 24.4L13.8 17L1.6 20.2L1.6 18.6L13.8 11.6L13.8 6L14 3.6L14.7 1.9Z\" stroke-width=\"2.5\"/><path d=\"M21.2 12H21.4Q22.2 12 22.2 12.8V15Q22.2 15.8 21.4 15.8H21.2Q20.4 15.8 20.4 15V12.8Q20.4 12 21.2 12ZM10.6 12H10.8Q11.6 12 11.6 12.8V15Q11.6 15.8 10.8 15.8H10.6Q9.8 15.8 9.8 15V12.8Q9.8 12 10.6 12Z\" stroke-width=\"2.5\"/><path d=\"M25.6 14.6H25.7Q26.5 14.6 26.5 15.4V17.4Q26.5 18.2 25.7 18.2H25.6Q24.8 18.2 24.8 17.4V15.4Q24.8 14.6 25.6 14.6ZM6.3 14.6H6.4Q7.2 14.6 7.2 15.4V17.4Q7.2 18.2 6.4 18.2H6.3Q5.5 18.2 5.5 17.4V15.4Q5.5 14.6 6.3 14.6Z\" stroke-width=\"2.5\"/></g><path d=\"M16 1.2L17.3 1.9L18 3.6L18.2 6L18.2 11.6L30.4 18.6L30.4 20.2L18.2 17L18.1 24.4L23.6 28L23.6 29.4L17.6 28.4L16.8 30.6L16 30.9L15.2 30.6L14.4 28.4L8.4 29.4L8.4 28L13.9 24.4L13.8 17L1.6 20.2L1.6 18.6L13.8 11.6L13.8 6L14 3.6L14.7 1.9Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M21.2 12H21.4Q22.2 12 22.2 12.8V15Q22.2 15.8 21.4 15.8H21.2Q20.4 15.8 20.4 15V12.8Q20.4 12 21.2 12ZM10.6 12H10.8Q11.6 12 11.6 12.8V15Q11.6 15.8 10.8 15.8H10.6Q9.8 15.8 9.8 15V12.8Q9.8 12 10.6 12Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M25.6 14.6H25.7Q26.5 14.6 26.5 15.4V17.4Q26.5 18.2 25.7 18.2H25.6Q24.8 18.2 24.8 17.4V15.4Q24.8 14.6 25.6 14.6ZM6.3 14.6H6.4Q7.2 14.6 7.2 15.4V17.4Q7.2 18.2 6.4 18.2H6.3Q5.5 18.2 5.5 17.4V15.4Q5.5 14.6 6.3 14.6Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M14.8 4.3Q16 3.5 17.2 4.3\" stroke=\"rgba(0,0,0,0.3)\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/></svg>",
@@ -70,6 +75,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#2b6cd4',
     rotate: true,
     scale: 0.85,
+    span: 20.8,
     balloon: false,
     adsb: [],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M16 2.2L16.8 2.9L17.3 4.4L17.4 6.5L17.4 13L26.4 18L26.4 19.4L17.4 17.2L17.3 27L21.4 28.6L21.4 29.8L16.8 29.4L16.4 30.6L16 30.8L15.6 30.6L15.2 29.4L10.6 29.8L10.6 28.6L14.7 27L14.6 17.2L5.6 19.4L5.6 18L14.6 13L14.6 6.5L14.7 4.4L15.2 2.9Z\" stroke-width=\"2.5\"/><path d=\"M18.7 21.2H18.8Q19.8 21.2 19.8 22.2V24.8Q19.8 25.8 18.8 25.8H18.7Q17.7 25.8 17.7 24.8V22.2Q17.7 21.2 18.7 21.2ZM13.2 21.2H13.3Q14.3 21.2 14.3 22.2V24.8Q14.3 25.8 13.3 25.8H13.2Q12.2 25.8 12.2 24.8V22.2Q12.2 21.2 13.2 21.2Z\" stroke-width=\"2.5\"/></g><path d=\"M16 2.2L16.8 2.9L17.3 4.4L17.4 6.5L17.4 13L26.4 18L26.4 19.4L17.4 17.2L17.3 27L21.4 28.6L21.4 29.8L16.8 29.4L16.4 30.6L16 30.8L15.6 30.6L15.2 29.4L10.6 29.8L10.6 28.6L14.7 27L14.6 17.2L5.6 19.4L5.6 18L14.6 13L14.6 6.5L14.7 4.4L15.2 2.9Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M18.7 21.2H18.8Q19.8 21.2 19.8 22.2V24.8Q19.8 25.8 18.8 25.8H18.7Q17.7 25.8 17.7 24.8V22.2Q17.7 21.2 18.7 21.2ZM13.2 21.2H13.3Q14.3 21.2 14.3 22.2V24.8Q14.3 25.8 13.3 25.8H13.2Q12.2 25.8 12.2 24.8V22.2Q12.2 21.2 13.2 21.2Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M15.1 5.1Q16 4.3 16.9 5.1\" stroke=\"rgba(0,0,0,0.3)\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/></svg>",
@@ -82,6 +88,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#2b6cd4',
     rotate: true,
     scale: 0.8,
+    span: 26.8,
     balloon: false,
     adsb: [],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M16 2.6L16.9 3.3L17.4 4.8L17.5 7L17.5 11.8L29 11.8L29.4 12.2L29.4 13.8L29 14.2L17.5 14.6L17.4 25.4L21.6 26.6L21.6 28L16.8 27.8L16.4 29.8L16 30L15.6 29.8L15.2 27.8L10.4 28L10.4 26.6L14.6 25.4L14.5 14.6L3 14.2L2.6 13.8L2.6 12.2L3 11.8L14.5 11.8L14.5 7L14.6 4.8L15.1 3.3Z\" stroke-width=\"2.5\"/><path d=\"M21.6 9.2H21.6Q22.6 9.2 22.6 10.2V16.2Q22.6 17.2 21.6 17.2H21.6Q20.6 17.2 20.6 16.2V10.2Q20.6 9.2 21.6 9.2ZM10.4 9.2H10.4Q11.4 9.2 11.4 10.2V16.2Q11.4 17.2 10.4 17.2H10.4Q9.4 17.2 9.4 16.2V10.2Q9.4 9.2 10.4 9.2Z\" stroke-width=\"2.5\"/><path d=\"M18.6 8.6H24.6M7.4 8.6H13.4\" stroke-width=\"2.2\" fill=\"none\"/></g><path d=\"M16 2.6L16.9 3.3L17.4 4.8L17.5 7L17.5 11.8L29 11.8L29.4 12.2L29.4 13.8L29 14.2L17.5 14.6L17.4 25.4L21.6 26.6L21.6 28L16.8 27.8L16.4 29.8L16 30L15.6 29.8L15.2 27.8L10.4 28L10.4 26.6L14.6 25.4L14.5 14.6L3 14.2L2.6 13.8L2.6 12.2L3 11.8L14.5 11.8L14.5 7L14.6 4.8L15.1 3.3Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M21.6 9.2H21.6Q22.6 9.2 22.6 10.2V16.2Q22.6 17.2 21.6 17.2H21.6Q20.6 17.2 20.6 16.2V10.2Q20.6 9.2 21.6 9.2ZM10.4 9.2H10.4Q11.4 9.2 11.4 10.2V16.2Q11.4 17.2 10.4 17.2H10.4Q9.4 17.2 9.4 16.2V10.2Q9.4 9.2 10.4 9.2Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M15.1 5.3Q16 4.5 16.9 5.3\" stroke=\"rgba(0,0,0,0.3)\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M18.6 8.6H24.6\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linecap=\"round\"/><path d=\"M7.4 8.6H13.4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linecap=\"round\"/></svg>",
@@ -94,6 +101,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#2b6cd4',
     rotate: true,
     scale: 0.7,
+    span: 21.6,
     balloon: false,
     adsb: [],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M16 1.8L16.6 3L17.1 5.2L17.3 8L17.3 14.6L26.2 21.4L26.8 21.2L26.8 22.6L17.3 19.2L17.2 26.6L20.8 28.6L20.8 29.8L16.7 29.3L16.3 30.4L16 30.6L15.7 30.4L15.3 29.3L11.2 29.8L11.2 28.6L14.8 26.6L14.7 19.2L5.2 22.6L5.2 21.2L5.8 21.4L14.7 14.6L14.7 8L14.9 5.2L15.4 3Z\" stroke-width=\"2.5\"/><path d=\"M18.5 20.2H18.5Q19.4 20.2 19.4 21.1V23.7Q19.4 24.6 18.5 24.6H18.5Q17.6 24.6 17.6 23.7V21.1Q17.6 20.2 18.5 20.2ZM13.5 20.2H13.5Q14.4 20.2 14.4 21.1V23.7Q14.4 24.6 13.5 24.6H13.5Q12.6 24.6 12.6 23.7V21.1Q12.6 20.2 13.5 20.2Z\" stroke-width=\"2.5\"/></g><path d=\"M16 1.8L16.6 3L17.1 5.2L17.3 8L17.3 14.6L26.2 21.4L26.8 21.2L26.8 22.6L17.3 19.2L17.2 26.6L20.8 28.6L20.8 29.8L16.7 29.3L16.3 30.4L16 30.6L15.7 30.4L15.3 29.3L11.2 29.8L11.2 28.6L14.8 26.6L14.7 19.2L5.2 22.6L5.2 21.2L5.8 21.4L14.7 14.6L14.7 8L14.9 5.2L15.4 3Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M18.5 20.2H18.5Q19.4 20.2 19.4 21.1V23.7Q19.4 24.6 18.5 24.6H18.5Q17.6 24.6 17.6 23.7V21.1Q17.6 20.2 18.5 20.2ZM13.5 20.2H13.5Q14.4 20.2 14.4 21.1V23.7Q14.4 24.6 13.5 24.6H13.5Q12.6 24.6 12.6 23.7V21.1Q12.6 20.2 13.5 20.2Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M15.1 5.5Q16 4.7 16.9 5.5\" stroke=\"rgba(0,0,0,0.3)\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/></svg>",
@@ -106,6 +114,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#2b6cd4',
     rotate: true,
     scale: 0.6,
+    span: 28,
     balloon: false,
     adsb: ["A1"],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M16 4.6L17 4.9L17.5 6L17.6 9.4L29.6 9.4L30 9.8L30 11.8L29.6 12.2L17.5 12.2L16.9 22.8L16.9 24L21.6 24L22 24.4L22 26L21.6 26.4L16.6 26.4L16.4 27.6L16 27.8L15.6 27.6L15.4 26.4L10.4 26.4L10 26L10 24.4L10.4 24L15.1 24L15.1 22.8L14.5 12.2L2.4 12.2L2 11.8L2 9.8L2.4 9.4L14.4 9.4L14.5 6L15 4.9Z\" stroke-width=\"2.5\"/><path d=\"M12.4 3.6H19.6\" stroke-width=\"2.2\" fill=\"none\"/></g><path d=\"M16 4.6L17 4.9L17.5 6L17.6 9.4L29.6 9.4L30 9.8L30 11.8L29.6 12.2L17.5 12.2L16.9 22.8L16.9 24L21.6 24L22 24.4L22 26L21.6 26.4L16.6 26.4L16.4 27.6L16 27.8L15.6 27.6L15.4 26.4L10.4 26.4L10 26L10 24.4L10.4 24L15.1 24L15.1 22.8L14.5 12.2L2.4 12.2L2 11.8L2 9.8L2.4 9.4L14.4 9.4L14.5 6L15 4.9Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M12.4 3.6H19.6\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linecap=\"round\"/><path d=\"M15 7.4H17\" stroke=\"rgba(0,0,0,0.3)\" stroke-width=\"1.2\" stroke-linecap=\"round\"/></svg>",
@@ -118,6 +127,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#2b6cd4',
     rotate: true,
     scale: 0.65,
+    span: 27.6,
     balloon: false,
     adsb: ["A2"],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M16 3.8L16.9 4.2L17.4 5.6L17.5 10.6L29.4 10.6L29.8 11L29.8 12.8L29.4 13.2L17.5 13.2L17 24L21.6 24.2L22 24.6L22 26L21.6 26.4L16.6 26.4L16.3 27.6L16 27.8L15.7 27.6L15.4 26.4L10.4 26.4L10 26L10 24.6L10.4 24.2L15 24L14.5 13.2L2.6 13.2L2.2 12.8L2.2 11L2.6 10.6L14.5 10.6L14.6 5.6L15.1 4.2Z\" stroke-width=\"2.5\"/><path d=\"M22.1 8.4H22.1Q23.2 8.4 23.2 9.5V14.3Q23.2 15.4 22.1 15.4H22.1Q21 15.4 21 14.3V9.5Q21 8.4 22.1 8.4ZM9.9 8.4H9.9Q11 8.4 11 9.5V14.3Q11 15.4 9.9 15.4H9.9Q8.8 15.4 8.8 14.3V9.5Q8.8 8.4 9.9 8.4Z\" stroke-width=\"2.5\"/><path d=\"M19.4 7.8H24.8M7.2 7.8H12.6\" stroke-width=\"2.2\" fill=\"none\"/></g><path d=\"M16 3.8L16.9 4.2L17.4 5.6L17.5 10.6L29.4 10.6L29.8 11L29.8 12.8L29.4 13.2L17.5 13.2L17 24L21.6 24.2L22 24.6L22 26L21.6 26.4L16.6 26.4L16.3 27.6L16 27.8L15.7 27.6L15.4 26.4L10.4 26.4L10 26L10 24.6L10.4 24.2L15 24L14.5 13.2L2.6 13.2L2.2 12.8L2.2 11L2.6 10.6L14.5 10.6L14.6 5.6L15.1 4.2Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M22.1 8.4H22.1Q23.2 8.4 23.2 9.5V14.3Q23.2 15.4 22.1 15.4H22.1Q21 15.4 21 14.3V9.5Q21 8.4 22.1 8.4ZM9.9 8.4H9.9Q11 8.4 11 9.5V14.3Q11 15.4 9.9 15.4H9.9Q8.8 15.4 8.8 14.3V9.5Q8.8 8.4 9.9 8.4Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M15.1 6.5Q16 5.7 16.9 6.5\" stroke=\"rgba(0,0,0,0.3)\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M19.4 7.8H24.8\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linecap=\"round\"/><path d=\"M7.2 7.8H12.6\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linecap=\"round\"/></svg>",
@@ -130,6 +140,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#2b6cd4',
     rotate: true,
     scale: 0.65,
+    span: 30.4,
     balloon: false,
     adsb: ["B1"],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M16 5.2L16.7 5.7L17 7.4L17 11.4L30.8 11.8L31.2 12.2L31.2 12.8L30.8 13.2L17 13.6L16.6 26.6L20.6 26.8L20.8 27.2L20.8 28L20.4 28.2L16.4 28.2L16 28.4L15.6 28.2L11.6 28.2L11.2 28L11.2 27.2L11.4 26.8L15.4 26.6L15 13.6L1.2 13.2L0.8 12.8L0.8 12.2L1.2 11.8L15 11.4L15 7.4L15.3 5.7Z\" stroke-width=\"2.5\"/></g><path d=\"M16 5.2L16.7 5.7L17 7.4L17 11.4L30.8 11.8L31.2 12.2L31.2 12.8L30.8 13.2L17 13.6L16.6 26.6L20.6 26.8L20.8 27.2L20.8 28L20.4 28.2L16.4 28.2L16 28.4L15.6 28.2L11.6 28.2L11.2 28L11.2 27.2L11.4 26.8L15.4 26.6L15 13.6L1.2 13.2L0.8 12.8L0.8 12.2L1.2 11.8L15 11.4L15 7.4L15.3 5.7Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M16 7.2V10\" stroke=\"rgba(0,0,0,0.3)\" stroke-width=\"1\" stroke-linecap=\"round\"/></svg>",
@@ -142,6 +153,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#2b6cd4',
     rotate: true,
     scale: 0.55,
+    span: 28,
     balloon: false,
     adsb: ["B4"],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M16 4L30 20.6L29.4 22L16 18.4L2.6 22L2 20.6Z\" stroke-width=\"2.5\"/><path d=\"M14.4 18.6A1.6 3.4 0 1 0 17.6 18.6A1.6 3.4 0 1 0 14.4 18.6Z\" stroke-width=\"1.4\"/></g><path d=\"M16 4L30 20.6L29.4 22L16 18.4L2.6 22L2 20.6Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M14.4 18.6A1.6 3.4 0 1 0 17.6 18.6A1.6 3.4 0 1 0 14.4 18.6Z\" fill=\"#123a7a\"/><path d=\"M16 6.4V16\" stroke=\"rgba(255,255,255,0.55)\" stroke-width=\"1\" stroke-linecap=\"round\"/></svg>",
@@ -154,6 +166,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#2b6cd4',
     rotate: true,
     scale: 0.7,
+    span: 7.2,
     balloon: false,
     adsb: ["A7"],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M12.4 13A3.6 5.4 0 1 0 19.6 13A3.6 5.4 0 1 0 12.4 13Z\" stroke-width=\"2.5\"/><path d=\"M15.2 17H16.8V28.4H15.2Z\" stroke-width=\"2.5\"/><path d=\"M13.6 26.4H15Q15.6 26.4 15.6 27V27.4Q15.6 28 15 28H13.6Q13 28 13 27.4V27Q13 26.4 13.6 26.4ZM17 26.4H18.4Q19 26.4 19 27V27.4Q19 28 18.4 28H17Q16.4 28 16.4 27.4V27Q16.4 26.4 17 26.4Z\" stroke-width=\"2.5\"/><path d=\"M6.2 5.2L25.8 20.8M25.8 5.2L6.2 20.8\" stroke-width=\"2.4\" fill=\"none\"/></g><path d=\"M12.4 13A3.6 5.4 0 1 0 19.6 13A3.6 5.4 0 1 0 12.4 13Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M15.2 17H16.8V28.4H15.2Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M13.6 26.4H15Q15.6 26.4 15.6 27V27.4Q15.6 28 15 28H13.6Q13 28 13 27.4V27Q13 26.4 13.6 26.4ZM17 26.4H18.4Q19 26.4 19 27V27.4Q19 28 18.4 28H17Q16.4 28 16.4 27.4V27Q16.4 26.4 17 26.4Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M6.2 5.2L25.8 20.8M25.8 5.2L6.2 20.8\" stroke=\"#123a7a\" stroke-width=\"1.3\" stroke-linecap=\"round\"/><circle cx=\"16\" cy=\"13\" r=\"1.3\" fill=\"#123a7a\"/><path d=\"M14.4 9.6Q16 8.6 17.6 9.6\" stroke=\"rgba(0,0,0,0.3)\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/></svg>",
@@ -166,6 +179,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#7048e8',
     rotate: true,
     scale: 0.5,
+    span: 15.02,
     balloon: false,
     adsb: ["B6"],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M8.49 9.91L22.09 23.51L23.51 22.09L9.91 8.49Z\" stroke-width=\"2.5\"/><path d=\"M22.09 8.49L8.49 22.09L9.91 23.51L23.51 9.91Z\" stroke-width=\"2.5\"/><path d=\"M12.8 13.2Q12.8 11.6 14.4 11.6H17.6Q19.2 11.6 19.2 13.2V18.8Q19.2 20.4 17.6 20.4H14.4Q12.8 20.4 12.8 18.8Z\" stroke-width=\"2.5\"/><circle cx=\"8.6\" cy=\"8.6\" r=\"4.4\" stroke-width=\"2.2\"/><circle cx=\"23.4\" cy=\"8.6\" r=\"4.4\" stroke-width=\"2.2\"/><circle cx=\"8.6\" cy=\"23.4\" r=\"4.4\" stroke-width=\"2.2\"/><circle cx=\"23.4\" cy=\"23.4\" r=\"4.4\" stroke-width=\"2.2\"/></g><path d=\"M8.49 9.91L22.09 23.51L23.51 22.09L9.91 8.49Z\" fill=\"#7048e8\" stroke=\"#341b8f\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M22.09 8.49L8.49 22.09L9.91 23.51L23.51 9.91Z\" fill=\"#7048e8\" stroke=\"#341b8f\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M12.8 13.2Q12.8 11.6 14.4 11.6H17.6Q19.2 11.6 19.2 13.2V18.8Q19.2 20.4 17.6 20.4H14.4Q12.8 20.4 12.8 18.8Z\" fill=\"#7048e8\" stroke=\"#341b8f\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><circle cx=\"8.6\" cy=\"8.6\" r=\"4.4\" fill=\"rgba(255,255,255,0.4)\" stroke=\"#341b8f\" stroke-width=\"1.1\"/><circle cx=\"23.4\" cy=\"8.6\" r=\"4.4\" fill=\"rgba(255,255,255,0.4)\" stroke=\"#341b8f\" stroke-width=\"1.1\"/><circle cx=\"8.6\" cy=\"23.4\" r=\"4.4\" fill=\"rgba(255,255,255,0.4)\" stroke=\"#341b8f\" stroke-width=\"1.1\"/><circle cx=\"23.4\" cy=\"23.4\" r=\"4.4\" fill=\"rgba(255,255,255,0.4)\" stroke=\"#341b8f\" stroke-width=\"1.1\"/><path d=\"M14.6 14.4L16 12.6L17.4 14.4Z\" fill=\"rgba(255,255,255,0.9)\"/></svg>",
@@ -178,6 +192,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#adb5bd',
     rotate: true,
     scale: 0.9,
+    span: 15.2,
     balloon: false,
     adsb: ["B2"],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M16 23L19 23.8L23.6 28.4L23.6 29.8L18.6 28.4L16 28.6L13.4 28.4L8.4 29.8L8.4 28.4L13 23.8Z\" stroke-width=\"2.5\"/><path d=\"M10.6 15A5.4 13 0 1 0 21.4 15A5.4 13 0 1 0 10.6 15Z\" stroke-width=\"2.5\"/></g><path d=\"M16 23L19 23.8L23.6 28.4L23.6 29.8L18.6 28.4L16 28.6L13.4 28.4L8.4 29.8L8.4 28.4L13 23.8Z\" fill=\"#adb5bd\" stroke=\"#495057\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M10.6 15A5.4 13 0 1 0 21.4 15A5.4 13 0 1 0 10.6 15Z\" fill=\"#adb5bd\" stroke=\"#495057\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><rect x=\"15\" y=\"12.4\" width=\"2\" height=\"5.6\" rx=\"1\" fill=\"rgba(0,0,0,0.3)\"/><path d=\"M13 6.4Q16 5 19 6.4\" stroke=\"rgba(255,255,255,0.55)\" stroke-width=\"1\" fill=\"none\" stroke-linecap=\"round\"/></svg>",
@@ -190,6 +205,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#5f6f52',
     rotate: true,
     scale: 0.75,
+    span: 22,
     balloon: false,
     adsb: ["A6"],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M16 1.4L16.6 2.6L17.1 5.4L17.4 10L18 13.4L27 22.4L27 24L18.6 22.6L18.6 25.2L22 28.4L22 29.6L17.4 28.6L16.8 30.6L16 30.8L15.2 30.6L14.6 28.6L10 29.6L10 28.4L13.4 25.2L13.4 22.6L5 24L5 22.4L14 13.4L14.6 10L14.9 5.4L15.4 2.6Z\" stroke-width=\"2.5\"/></g><path d=\"M16 1.4L16.6 2.6L17.1 5.4L17.4 10L18 13.4L27 22.4L27 24L18.6 22.6L18.6 25.2L22 28.4L22 29.6L17.4 28.6L16.8 30.6L16 30.8L15.2 30.6L14.6 28.6L10 29.6L10 28.4L13.4 25.2L13.4 22.6L5 24L5 22.4L14 13.4L14.6 10L14.9 5.4L15.4 2.6Z\" fill=\"#5f6f52\" stroke=\"#2b3424\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M15.05 8.4A0.95 2.4 0 1 0 16.95 8.4A0.95 2.4 0 1 0 15.05 8.4Z\" fill=\"rgba(255,255,255,0.55)\"/></svg>",
@@ -202,6 +218,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#5f6f52',
     rotate: true,
     scale: 1.15,
+    span: 29.6,
     balloon: false,
     adsb: [],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M16 2L17.2 2.6L17.9 4.4L18.1 7L18.1 11L30.4 11.6L30.8 12L30.8 13.6L30.4 14L18.1 15L17.9 25L23.4 26L23.8 26.4L23.8 28L23.4 28.4L17.2 28.4L16.6 30.4L16 30.6L15.4 30.4L14.8 28.4L8.6 28.4L8.2 28L8.2 26.4L8.6 26L14.1 25L13.9 15L1.6 14L1.2 13.6L1.2 12L1.6 11.6L13.9 11L13.9 7L14.1 4.4L14.8 2.6Z\" stroke-width=\"2.5\"/><path d=\"M21.5 8.6H21.5Q22.4 8.6 22.4 9.5V15.1Q22.4 16 21.5 16H21.5Q20.6 16 20.6 15.1V9.5Q20.6 8.6 21.5 8.6ZM10.5 8.6H10.5Q11.4 8.6 11.4 9.5V15.1Q11.4 16 10.5 16H10.5Q9.6 16 9.6 15.1V9.5Q9.6 8.6 10.5 8.6Z\" stroke-width=\"2.5\"/><path d=\"M26.4 9H26.4Q27.2 9 27.2 9.8V15.4Q27.2 16.2 26.4 16.2H26.4Q25.6 16.2 25.6 15.4V9.8Q25.6 9 26.4 9ZM5.6 9H5.6Q6.4 9 6.4 9.8V15.4Q6.4 16.2 5.6 16.2H5.6Q4.8 16.2 4.8 15.4V9.8Q4.8 9 5.6 9Z\" stroke-width=\"2.5\"/><path d=\"M19.2 8.2H23.8M24.2 8.6H28.6M8.2 8.2H12.8M3.4 8.6H7.8\" stroke-width=\"2.2\" fill=\"none\"/></g><path d=\"M16 2L17.2 2.6L17.9 4.4L18.1 7L18.1 11L30.4 11.6L30.8 12L30.8 13.6L30.4 14L18.1 15L17.9 25L23.4 26L23.8 26.4L23.8 28L23.4 28.4L17.2 28.4L16.6 30.4L16 30.6L15.4 30.4L14.8 28.4L8.6 28.4L8.2 28L8.2 26.4L8.6 26L14.1 25L13.9 15L1.6 14L1.2 13.6L1.2 12L1.6 11.6L13.9 11L13.9 7L14.1 4.4L14.8 2.6Z\" fill=\"#5f6f52\" stroke=\"#2b3424\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M21.5 8.6H21.5Q22.4 8.6 22.4 9.5V15.1Q22.4 16 21.5 16H21.5Q20.6 16 20.6 15.1V9.5Q20.6 8.6 21.5 8.6ZM10.5 8.6H10.5Q11.4 8.6 11.4 9.5V15.1Q11.4 16 10.5 16H10.5Q9.6 16 9.6 15.1V9.5Q9.6 8.6 10.5 8.6Z\" fill=\"#5f6f52\" stroke=\"#2b3424\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M26.4 9H26.4Q27.2 9 27.2 9.8V15.4Q27.2 16.2 26.4 16.2H26.4Q25.6 16.2 25.6 15.4V9.8Q25.6 9 26.4 9ZM5.6 9H5.6Q6.4 9 6.4 9.8V15.4Q6.4 16.2 5.6 16.2H5.6Q4.8 16.2 4.8 15.4V9.8Q4.8 9 5.6 9Z\" fill=\"#5f6f52\" stroke=\"#2b3424\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M14.9 4.7Q16 3.9000000000000004 17.1 4.7\" stroke=\"rgba(0,0,0,0.3)\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M19.2 8.2H23.8\" stroke=\"#2b3424\" stroke-width=\"1.1\" stroke-linecap=\"round\"/><path d=\"M24.2 8.6H28.6\" stroke=\"#2b3424\" stroke-width=\"1.1\" stroke-linecap=\"round\"/><path d=\"M8.2 8.2H12.8\" stroke=\"#2b3424\" stroke-width=\"1.1\" stroke-linecap=\"round\"/><path d=\"M3.4 8.6H7.8\" stroke=\"#2b3424\" stroke-width=\"1.1\" stroke-linecap=\"round\"/></svg>",
@@ -214,6 +231,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#f59f00',
     rotate: true,
     scale: 0.45,
+    span: 8.8,
     balloon: false,
     adsb: ["C1","C2"],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M11.6 8Q11.6 6 13.6 6H18.4Q20.4 6 20.4 8V24Q20.4 26 18.4 26H13.6Q11.6 26 11.6 24Z\" stroke-width=\"2.5\"/></g><path d=\"M11.6 8Q11.6 6 13.6 6H18.4Q20.4 6 20.4 8V24Q20.4 26 18.4 26H13.6Q11.6 26 11.6 24Z\" fill=\"#f59f00\" stroke=\"#7a4f00\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><rect x=\"12.8\" y=\"7.4\" width=\"6.4\" height=\"4.4\" rx=\"1\" fill=\"rgba(0,0,0,0.3)\"/><rect x=\"13\" y=\"13.4\" width=\"6\" height=\"1.6\" rx=\"0.8\" fill=\"rgba(255,255,255,0.9)\"/></svg>",
@@ -226,6 +244,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#8c96a3',
     rotate: true,
     scale: 0.85,
+    span: 25.2,
     balloon: false,
     adsb: [],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M16 1.6L16.9 2.3L17.5 3.8L17.7 6L17.7 11.4L28.6 17.4L28.6 19L17.7 16.4L17.6 24.2L22 27.4L22 28.8L17.2 27.9L16.6 30L16 30.4L15.4 30L14.8 27.9L10 28.8L10 27.4L14.4 24.2L14.3 16.4L3.4 19L3.4 17.4L14.3 11.4L14.3 6L14.5 3.8L15.1 2.3Z\" stroke-width=\"2.5\"/></g><path d=\"M16 1.6L16.9 2.3L17.5 3.8L17.7 6L17.7 11.4L28.6 17.4L28.6 19L17.7 16.4L17.6 24.2L22 27.4L22 28.8L17.2 27.9L16.6 30L16 30.4L15.4 30L14.8 27.9L10 28.8L10 27.4L14.4 24.2L14.3 16.4L3.4 19L3.4 17.4L14.3 11.4L14.3 6L14.5 3.8L15.1 2.3Z\" fill=\"#8c96a3\" stroke=\"#454d57\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M15 4.9Q16 4.1000000000000005 17 4.9\" stroke=\"rgba(0,0,0,0.3)\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/></svg>",
@@ -238,6 +257,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#f76707',
     rotate: false,
     scale: 0.8,
+    span: 14.4,
     balloon: true,
     adsb: [],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M8.8 10.4A7.2 8 0 1 0 23.2 10.4A7.2 8 0 1 0 8.8 10.4ZM14.6 18.2H17.4L16.6 19.8H15.4Z\" stroke-width=\"2.5\"/><path d=\"M13.2 24.2H18.8V29.4H13.2Z\" stroke-width=\"2.5\"/><path d=\"M16 19.8V24.2\" stroke-width=\"1.6\"/></g><path d=\"M8.8 10.4A7.2 8 0 1 0 23.2 10.4A7.2 8 0 1 0 8.8 10.4ZM14.6 18.2H17.4L16.6 19.8H15.4Z\" fill=\"#f76707\" stroke=\"#8a3500\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M13.2 24.2H18.8V29.4H13.2Z\" fill=\"#f8f9fa\" stroke=\"#8a3500\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M16 19.8V24.2\" stroke=\"#8a3500\" stroke-width=\"0.9\"/><path d=\"M11.6 7.4A1.6 2.4 0 1 0 14.8 7.4A1.6 2.4 0 1 0 11.6 7.4Z\" fill=\"rgba(255,255,255,0.55)\"/><path d=\"M13.2 26.4H18.8\" stroke=\"#f76707\" stroke-width=\"1.2\"/></svg>",
@@ -250,6 +270,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#f76707',
     rotate: false,
     scale: 0.8,
+    span: 20.8,
     balloon: true,
     adsb: [],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M5.6 14Q5.6 4 16 4T26.4 14Q23.8 12.4 21.2 14Q18.6 12.4 16 14Q13.4 12.4 10.8 14Q8.2 12.4 5.6 14Z\" stroke-width=\"2.5\"/><path d=\"M13.2 23.8H18.8V29H13.2Z\" stroke-width=\"2.5\"/><path d=\"M6 14.2L14 23.8M16 14L16 23.8M26 14.2L18 23.8\" stroke-width=\"1.4\" fill=\"none\"/></g><path d=\"M5.6 14Q5.6 4 16 4T26.4 14Q23.8 12.4 21.2 14Q18.6 12.4 16 14Q13.4 12.4 10.8 14Q8.2 12.4 5.6 14Z\" fill=\"#f76707\" stroke=\"#8a3500\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M13.2 23.8H18.8V29H13.2Z\" fill=\"#f8f9fa\" stroke=\"#8a3500\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M16 4.4V13.4M10.8 5.6Q9.6 9 10.8 13.4M21.2 5.6Q22.4 9 21.2 13.4\" stroke=\"rgba(255,255,255,0.55)\" stroke-width=\"1\" fill=\"none\"/><path d=\"M6 14.2L14 23.8M16 14L16 23.8M26 14.2L18 23.8\" stroke=\"#8a3500\" stroke-width=\"0.8\" fill=\"none\"/><path d=\"M13.2 26H18.8\" stroke=\"#f76707\" stroke-width=\"1.2\"/></svg>",
@@ -262,6 +283,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#2f9e44',
     rotate: false,
     scale: 0.7,
+    span: 10.8,
     balloon: true,
     adsb: [],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M10.6 19.2H21.4V27H10.6Z\" stroke-width=\"2.5\"/><path d=\"M12.2 5.2L20.6 8.2L12.2 11.2Z\" stroke-width=\"2.5\"/><path d=\"M12.2 5.2V19.2M5 28.6H27\" stroke-width=\"2.4\"/></g><path d=\"M10.6 19.2H21.4V27H10.6Z\" fill=\"#f8f9fa\" stroke=\"#495057\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M12.2 5.2L20.6 8.2L12.2 11.2Z\" fill=\"#2f9e44\" stroke=\"#1b5e2a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M12.2 5.2V19.2\" stroke=\"#495057\" stroke-width=\"1.3\" stroke-linecap=\"round\"/><path d=\"M10.6 22.6H21.4\" stroke=\"#f76707\" stroke-width=\"1.4\"/><path d=\"M5 28.6H27\" stroke=\"#495057\" stroke-width=\"1.4\" stroke-linecap=\"round\"/></svg>",
@@ -274,6 +296,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#f76707',
     rotate: false,
     scale: 0.6,
+    span: 24,
     balloon: true,
     adsb: [],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M16 4L18.07 11.01L24.49 7.51L20.99 13.93L28 16L20.99 18.07L24.49 24.49L18.07 20.99L16 28L13.93 20.99L7.51 24.49L11.01 18.07L4 16L11.01 13.93L7.51 7.51L13.93 11.01Z\" stroke-width=\"2.5\"/></g><path d=\"M16 4L18.07 11.01L24.49 7.51L20.99 13.93L28 16L20.99 18.07L24.49 24.49L18.07 20.99L16 28L13.93 20.99L7.51 24.49L11.01 18.07L4 16L11.01 13.93L7.51 7.51L13.93 11.01Z\" fill=\"#f76707\" stroke=\"#8a3500\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><circle cx=\"16\" cy=\"16\" r=\"3\" fill=\"#ffffff\"/></svg>",
@@ -286,6 +309,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#f76707',
     rotate: false,
     scale: 0.7,
+    span: 20.8,
     balloon: true,
     adsb: [],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M5.6 16A10.4 10.4 0 1 0 26.4 16A10.4 10.4 0 1 0 5.6 16ZM8.4 16A7.6 7.6 0 1 0 23.6 16A7.6 7.6 0 1 0 8.4 16Z\" fill-rule=\"evenodd\" stroke-width=\"2.5\"/><path d=\"M16 2.6V10M16 22V29.4M2.6 16H10M22 16H29.4\" stroke-width=\"2.4\"/></g><path d=\"M5.6 16A10.4 10.4 0 1 0 26.4 16A10.4 10.4 0 1 0 5.6 16ZM8.4 16A7.6 7.6 0 1 0 23.6 16A7.6 7.6 0 1 0 8.4 16Z\" fill=\"#f76707\" fill-rule=\"evenodd\" stroke=\"#8a3500\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M16 2.6V10M16 22V29.4M2.6 16H10M22 16H29.4\" stroke=\"#8a3500\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><circle cx=\"16\" cy=\"16\" r=\"1.8\" fill=\"#f76707\" stroke=\"#8a3500\" stroke-width=\"0.8\"/></svg>",
@@ -427,11 +451,11 @@ const SPAN_LIST: [number, string][] = [
   [12, 'LJ35 LJ31 LJ24 LJ25'], [13.6, 'BE40 PRM1'], [12.1, 'HDJT'], [11.8, 'SF50'],
   [16.3, 'PC12'], [15.9, 'C208'], [12.8, 'TBM7 TBM8 TBM9'], [14.1, 'PC6T'], [13.1, 'PA46 M600'], [12.8, 'KODI'],
   [11, 'C172 C170 C175 C177 C182 C180 C185 P210 C210'], [10.1, 'C150 C152 C162'], [11, 'C206 T206 C207'], [10.7, 'PA28 P28A P28B P28R P28T PA32 P32R'],
-  [10.8, 'PA18 PA20 PA22 J3 CUB2'], [11.7, 'SR22 S22T SR20 SR21'], [11.6, 'DA40 DA42'], [10.8, 'DA20 DV20'], [14.6, 'DA62'], [10.2, 'BE33 BE35 BE36'],
+  [10.8, 'PA18 PA20 PA22 J3 CUB2'], [11.7, 'SR22 S22T SR20 SR21'], [11.6, 'DA40'], [13.55, 'DA42'], [10.8, 'DA20 DV20'], [14.6, 'DA62'], [10.2, 'BE33 BE35 BE36'],
   [11.5, 'BE55 BE58 BE95'], [11.6, 'BE76'], [11.9, 'PA34 PA44 PA30'], [12.4, 'PA31 PA23 PA27'], [11.3, 'C310 C320 C340'], [13.5, 'C402 C404 C414 C421'],
   [11, 'M20P M20T M20J'], [7.7, 'RV4 RV6 RV7 RV8 RV12'], [8.8, 'RV10 RV9'], [11.6, 'P68'], [14.9, 'BN2P'], [17, 'Y12'],
   [10.2, 'EC35 H135 B06 B06T EC30 H130'], [11, 'EC45 H145 BK17'], [10.7, 'AS50 H125 AS55 B407 B505'], [12.6, 'EC55 H155 AS65'], [14.8, 'EC75 H175 H160'],
-  [16.2, 'EC25 H225 H215 AS32'], [13.8, 'A139 AW09'], [12.9, 'A169'], [14.6, 'A189'], [11, 'A109 A119'], [13.4, 'S76'], [17.2, 'S92'], [18.9, 'S61'],
+  [16.2, 'EC25 H225 H215 AS32'], [13.8, 'A139'], [10.96, 'AW09'], [12.9, 'A169'], [14.6, 'A189'], [11, 'A109 A119'], [13.4, 'S76'], [17.2, 'S92'], [18.9, 'S61'],
   [16.4, 'H60 UH60 MH60 S70'], [14.6, 'AH64 H64'], [18.3, 'CH47 H47'], [24.1, 'CH53 H53'], [11.6, 'V22'], [21.3, 'MI8 MI17'], [17.3, 'MI24'], [32, 'MI26'],
   [14.6, 'B412 B212 UH1 H1'], [12.1, 'B429 B427 B430'], [10.1, 'R44'], [7.7, 'R22'], [10.1, 'R66'], [16.3, 'NH90'], [8.4, 'EC20 H120'],
   [15, 'GLID'], [10, 'ULAC'],
@@ -462,14 +486,15 @@ export function aircraftIconScale(key: AircraftIconKey, type?: string | null): n
 }
 
 /**
- * The aircraft's real size in meters for true-scale drawing up close: the
- * listed wingspan, else a typical one for its icon. Null for balloons and
- * unknown aircraft.
+ * The size to give mercatorMeters() for true-scale drawing up close: the
+ * listed wingspan (else a typical one for the icon), adjusted for how much of
+ * the image this icon's drawing spans. Null for balloons and unknown aircraft.
  */
 export function aircraftSizeMeters(key: AircraftIconKey, type?: string | null): number | null {
   const icon = AIRCRAFT_ICONS[key];
   if (!icon || icon.balloon || key === 'unknown') return null;
-  return aircraftWingspan(type) ?? TYPICAL_SPANS[key] ?? null;
+  const span = aircraftWingspan(type) ?? TYPICAL_SPANS[key];
+  return span ? drawnMeters(span, icon.span) : null;
 }
 
 /** Typical spans (meters) for aircraft whose type is not listed. */
@@ -573,8 +598,17 @@ export function iconZoomFactor(zoom: number): number {
   return s[s.length - 1][1];
 }
 
-/** Share of the 32 px image that the drawing spans (wingtip to wingtip, bow to stern). */
+/**
+ * Share of the 32 px image that `meters` covers in the true-size helpers.
+ * aircraftSizeMeters() and marineSizeMeters() scale each craft's real size by
+ * its icon's own drawn span, so the drawing itself covers the real size.
+ */
 export const ICON_DRAWN_SHARE = 0.85;
+
+/** Real meters scaled so a drawing `span` grid units wide covers them at ICON_DRAWN_SHARE. */
+function drawnMeters(meters: number, span: number | undefined): number {
+  return span && span > 1 ? (meters * 32 * ICON_DRAWN_SHARE) / span : meters;
+}
 
 const EARTH_CIRCUMFERENCE = 40075016.686;
 
@@ -615,7 +649,7 @@ export function iconSizeExpression(
   const scale = ['coalesce', ['get', scaleProp], 1];
   const meters = ['coalesce', ['get', metersProp], 0];
   const stops: unknown[] = [];
-  const zooms = [...ICON_ZOOM_STOPS.map(([z]) => z).filter((z) => z < 12), 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22];
+  const zooms = [...ICON_ZOOM_STOPS.map(([z]) => z).filter((z) => z < 12), 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
   for (const z of zooms) {
     const zoomed = ['*', +(base * iconZoomFactor(z)).toFixed(4), scale];
     if (!trueSize || z < 12) {

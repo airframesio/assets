@@ -14,6 +14,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { stripTypeScriptTypes } from 'node:module';
 import { ICONS, iconSvg } from './icons.mjs';
+import { pathBounds } from '../../shared/extent.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const out = join(here, '..');
@@ -28,6 +29,7 @@ const icons = ICONS.map((i) => ({
   stroke: i.stroke,
   rotate: i.rotate,
   scale: i.scale,
+  span: pathBounds([i.body].flat().map((b) => (typeof b === 'string' ? b : b.d))).height,
   codes: i.codes ?? [],
   names: i.names ?? [],
   svg: iconSvg(i),
@@ -50,7 +52,7 @@ const data = icons
   .map(
     (i) =>
       `  {\n    key: '${i.key}',\n    label: ${JSON.stringify(i.label)},\n    group: ${JSON.stringify(i.group)},\n` +
-      `    color: '${i.color}',\n    rotate: ${i.rotate},\n    scale: ${i.scale},\n    codes: ${JSON.stringify(i.codes)},\n` +
+      `    color: '${i.color}',\n    rotate: ${i.rotate},\n    scale: ${i.scale},\n    span: ${i.span},\n    codes: ${JSON.stringify(i.codes)},\n` +
       `    names: ${JSON.stringify(i.names)},\n    svg: ${JSON.stringify(i.svg)},\n  },`,
   )
   .join('\n');
@@ -77,6 +79,8 @@ export interface MarineIcon {
   rotate: boolean;
   /** Size relative to a typical 100 m ship (1); see marineIconScale(). */
   scale: number;
+  /** The drawing's length (height) on the 32 x 32 grid, for true-size drawing. */
+  span: number;
   /** AIS ship and cargo type codes (or [from, to] ranges) that select this icon. */
   codes: (number | [number, number])[];
   /** Words in type text that select this icon. */

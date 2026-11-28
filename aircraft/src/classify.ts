@@ -130,11 +130,11 @@ const SPAN_LIST: [number, string][] = [
   [12, 'LJ35 LJ31 LJ24 LJ25'], [13.6, 'BE40 PRM1'], [12.1, 'HDJT'], [11.8, 'SF50'],
   [16.3, 'PC12'], [15.9, 'C208'], [12.8, 'TBM7 TBM8 TBM9'], [14.1, 'PC6T'], [13.1, 'PA46 M600'], [12.8, 'KODI'],
   [11, 'C172 C170 C175 C177 C182 C180 C185 P210 C210'], [10.1, 'C150 C152 C162'], [11, 'C206 T206 C207'], [10.7, 'PA28 P28A P28B P28R P28T PA32 P32R'],
-  [10.8, 'PA18 PA20 PA22 J3 CUB2'], [11.7, 'SR22 S22T SR20 SR21'], [11.6, 'DA40 DA42'], [10.8, 'DA20 DV20'], [14.6, 'DA62'], [10.2, 'BE33 BE35 BE36'],
+  [10.8, 'PA18 PA20 PA22 J3 CUB2'], [11.7, 'SR22 S22T SR20 SR21'], [11.6, 'DA40'], [13.55, 'DA42'], [10.8, 'DA20 DV20'], [14.6, 'DA62'], [10.2, 'BE33 BE35 BE36'],
   [11.5, 'BE55 BE58 BE95'], [11.6, 'BE76'], [11.9, 'PA34 PA44 PA30'], [12.4, 'PA31 PA23 PA27'], [11.3, 'C310 C320 C340'], [13.5, 'C402 C404 C414 C421'],
   [11, 'M20P M20T M20J'], [7.7, 'RV4 RV6 RV7 RV8 RV12'], [8.8, 'RV10 RV9'], [11.6, 'P68'], [14.9, 'BN2P'], [17, 'Y12'],
   [10.2, 'EC35 H135 B06 B06T EC30 H130'], [11, 'EC45 H145 BK17'], [10.7, 'AS50 H125 AS55 B407 B505'], [12.6, 'EC55 H155 AS65'], [14.8, 'EC75 H175 H160'],
-  [16.2, 'EC25 H225 H215 AS32'], [13.8, 'A139 AW09'], [12.9, 'A169'], [14.6, 'A189'], [11, 'A109 A119'], [13.4, 'S76'], [17.2, 'S92'], [18.9, 'S61'],
+  [16.2, 'EC25 H225 H215 AS32'], [13.8, 'A139'], [10.96, 'AW09'], [12.9, 'A169'], [14.6, 'A189'], [11, 'A109 A119'], [13.4, 'S76'], [17.2, 'S92'], [18.9, 'S61'],
   [16.4, 'H60 UH60 MH60 S70'], [14.6, 'AH64 H64'], [18.3, 'CH47 H47'], [24.1, 'CH53 H53'], [11.6, 'V22'], [21.3, 'MI8 MI17'], [17.3, 'MI24'], [32, 'MI26'],
   [14.6, 'B412 B212 UH1 H1'], [12.1, 'B429 B427 B430'], [10.1, 'R44'], [7.7, 'R22'], [10.1, 'R66'], [16.3, 'NH90'], [8.4, 'EC20 H120'],
   [15, 'GLID'], [10, 'ULAC'],
@@ -165,14 +165,15 @@ export function aircraftIconScale(key: AircraftIconKey, type?: string | null): n
 }
 
 /**
- * The aircraft's real size in meters for true-scale drawing up close: the
- * listed wingspan, else a typical one for its icon. Null for balloons and
- * unknown aircraft.
+ * The size to give mercatorMeters() for true-scale drawing up close: the
+ * listed wingspan (else a typical one for the icon), adjusted for how much of
+ * the image this icon's drawing spans. Null for balloons and unknown aircraft.
  */
 export function aircraftSizeMeters(key: AircraftIconKey, type?: string | null): number | null {
   const icon = AIRCRAFT_ICONS[key];
   if (!icon || icon.balloon || key === 'unknown') return null;
-  return aircraftWingspan(type) ?? TYPICAL_SPANS[key] ?? null;
+  const span = aircraftWingspan(type) ?? TYPICAL_SPANS[key];
+  return span ? drawnMeters(span, icon.span) : null;
 }
 
 /** Typical spans (meters) for aircraft whose type is not listed. */

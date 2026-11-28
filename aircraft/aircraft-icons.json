@@ -10,6 +10,7 @@
       "stroke": "#123a7a",
       "rotate": true,
       "scale": 1,
+      "span": 25.2,
       "balloon": false,
       "adsb": [
         "A3",
@@ -25,6 +26,7 @@
       "stroke": "#123a7a",
       "rotate": true,
       "scale": 1.25,
+      "span": 28.8,
       "balloon": false,
       "adsb": [
         "A5"
@@ -39,6 +41,7 @@
       "stroke": "#123a7a",
       "rotate": true,
       "scale": 1.4,
+      "span": 28.8,
       "balloon": false,
       "adsb": [],
       "file": "svg/quad.svg"
@@ -51,6 +54,7 @@
       "stroke": "#123a7a",
       "rotate": true,
       "scale": 0.85,
+      "span": 20.8,
       "balloon": false,
       "adsb": [],
       "file": "svg/regional.svg"
@@ -63,6 +67,7 @@
       "stroke": "#123a7a",
       "rotate": true,
       "scale": 0.8,
+      "span": 26.8,
       "balloon": false,
       "adsb": [],
       "file": "svg/turboprop.svg"
@@ -75,6 +80,7 @@
       "stroke": "#123a7a",
       "rotate": true,
       "scale": 0.7,
+      "span": 21.6,
       "balloon": false,
       "adsb": [],
       "file": "svg/bizjet.svg"
@@ -87,6 +93,7 @@
       "stroke": "#123a7a",
       "rotate": true,
       "scale": 0.6,
+      "span": 28,
       "balloon": false,
       "adsb": [
         "A1"
@@ -101,6 +108,7 @@
       "stroke": "#123a7a",
       "rotate": true,
       "scale": 0.65,
+      "span": 27.6,
       "balloon": false,
       "adsb": [
         "A2"
@@ -115,6 +123,7 @@
       "stroke": "#123a7a",
       "rotate": true,
       "scale": 0.65,
+      "span": 30.4,
       "balloon": false,
       "adsb": [
         "B1"
@@ -129,6 +138,7 @@
       "stroke": "#123a7a",
       "rotate": true,
       "scale": 0.55,
+      "span": 28,
       "balloon": false,
       "adsb": [
         "B4"
@@ -143,6 +153,7 @@
       "stroke": "#123a7a",
       "rotate": true,
       "scale": 0.7,
+      "span": 7.2,
       "balloon": false,
       "adsb": [
         "A7"
@@ -157,6 +168,7 @@
       "stroke": "#341b8f",
       "rotate": true,
       "scale": 0.5,
+      "span": 15.02,
       "balloon": false,
       "adsb": [
         "B6"
@@ -171,6 +183,7 @@
       "stroke": "#495057",
       "rotate": true,
       "scale": 0.9,
+      "span": 15.2,
       "balloon": false,
       "adsb": [
         "B2"
@@ -185,6 +198,7 @@
       "stroke": "#2b3424",
       "rotate": true,
       "scale": 0.75,
+      "span": 22,
       "balloon": false,
       "adsb": [
         "A6"
@@ -199,6 +213,7 @@
       "stroke": "#2b3424",
       "rotate": true,
       "scale": 1.15,
+      "span": 29.6,
       "balloon": false,
       "adsb": [],
       "file": "svg/military-transport.svg"
@@ -211,6 +226,7 @@
       "stroke": "#7a4f00",
       "rotate": true,
       "scale": 0.45,
+      "span": 8.8,
       "balloon": false,
       "adsb": [
         "C1",
@@ -226,6 +242,7 @@
       "stroke": "#454d57",
       "rotate": true,
       "scale": 0.85,
+      "span": 25.2,
       "balloon": false,
       "adsb": [],
       "file": "svg/unknown.svg"
@@ -238,6 +255,7 @@
       "stroke": "#8a3500",
       "rotate": false,
       "scale": 0.8,
+      "span": 14.4,
       "balloon": true,
       "adsb": [],
       "file": "svg/balloon.svg"
@@ -250,6 +268,7 @@
       "stroke": "#8a3500",
       "rotate": false,
       "scale": 0.8,
+      "span": 20.8,
       "balloon": true,
       "adsb": [],
       "file": "svg/parachute.svg"
@@ -262,6 +281,7 @@
       "stroke": "#495057",
       "rotate": false,
       "scale": 0.7,
+      "span": 10.8,
       "balloon": true,
       "adsb": [],
       "file": "svg/landed.svg"
@@ -274,6 +294,7 @@
       "stroke": "#8a3500",
       "rotate": false,
       "scale": 0.6,
+      "span": 24,
       "balloon": true,
       "adsb": [],
       "file": "svg/burst.svg"
@@ -286,6 +307,7 @@
       "stroke": "#8a3500",
       "rotate": false,
       "scale": 0.7,
+      "span": 20.8,
       "balloon": true,
       "adsb": [],
       "file": "svg/landing.svg"

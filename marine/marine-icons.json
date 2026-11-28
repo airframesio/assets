@@ -10,6 +10,7 @@
       "stroke": "#1b5e2a",
       "rotate": true,
       "scale": 1.25,
+      "span": 27,
       "codes": [
         [
           70,
@@ -35,6 +36,7 @@
       "stroke": "#8f1d1d",
       "rotate": true,
       "scale": 1.25,
+      "span": 27,
       "codes": [
         [
           80,
@@ -58,6 +60,7 @@
       "stroke": "#0f4c8a",
       "rotate": true,
       "scale": 1.15,
+      "span": 27,
       "codes": [
         [
           60,
@@ -80,6 +83,7 @@
       "stroke": "#8a6400",
       "rotate": true,
       "scale": 0.85,
+      "span": 24,
       "codes": [
         [
           40,
@@ -101,6 +105,7 @@
       "stroke": "#9c3f1a",
       "rotate": true,
       "scale": 0.75,
+      "span": 20,
       "codes": [
         30
       ],
@@ -118,6 +123,7 @@
       "stroke": "#065c42",
       "rotate": true,
       "scale": 0.65,
+      "span": 20,
       "codes": [
         31,
         32,
@@ -138,6 +144,7 @@
       "stroke": "#c92a2a",
       "rotate": true,
       "scale": 0.65,
+      "span": 20.5,
       "codes": [
         50
       ],
@@ -154,6 +161,7 @@
       "stroke": "#a14a00",
       "rotate": true,
       "scale": 0.7,
+      "span": 23,
       "codes": [
         51
       ],
@@ -174,6 +182,7 @@
       "stroke": "#0c1d4f",
       "rotate": true,
       "scale": 0.75,
+      "span": 23,
       "codes": [
         55
       ],
@@ -193,6 +202,7 @@
       "stroke": "#2b323a",
       "rotate": true,
       "scale": 1.05,
+      "span": 28.2,
       "codes": [
         35
       ],
@@ -212,6 +222,7 @@
       "stroke": "#3d1f9e",
       "rotate": true,
       "scale": 0.65,
+      "span": 22.5,
       "codes": [
         36
       ],
@@ -230,6 +241,7 @@
       "stroke": "#7d1438",
       "rotate": true,
       "scale": 0.6,
+      "span": 17.5,
       "codes": [
         37
       ],
@@ -248,6 +260,7 @@
       "stroke": "#0a5a66",
       "rotate": true,
       "scale": 0.85,
+      "span": 25,
       "codes": [
         33,
         34,
@@ -282,6 +295,7 @@
       "stroke": "#3b5e0b",
       "rotate": true,
       "scale": 0.7,
+      "span": 24,
       "codes": [
         [
           20,
@@ -303,6 +317,7 @@
       "stroke": "#22282e",
       "rotate": true,
       "scale": 0.9,
+      "span": 24,
       "codes": [
         [
           90,
@@ -331,6 +346,7 @@
       "stroke": "#4a535c",
       "rotate": true,
       "scale": 0.8,
+      "span": 24,
       "codes": [
         0
       ],
@@ -348,6 +364,7 @@
       "stroke": "#4a535c",
       "rotate": true,
       "scale": 0.6,
+      "span": 15.5,
       "codes": [],
       "names": [
         "class b",
@@ -364,6 +381,7 @@
       "stroke": "#5c4400",
       "rotate": false,
       "scale": 0.7,
+      "span": 16,
       "codes": [],
       "names": [
         "aid to navigation",
@@ -382,6 +400,7 @@
       "stroke": "#5c4400",
       "rotate": false,
       "scale": 0.75,
+      "span": 20.6,
       "codes": [],
       "names": [
         "lighthouse",
@@ -400,6 +419,7 @@
       "stroke": "#e8a200",
       "rotate": false,
       "scale": 0.7,
+      "span": 21.2,
       "codes": [],
       "names": [
         "virtual aid",
@@ -416,6 +436,7 @@
       "stroke": "#1c2f80",
       "rotate": false,
       "scale": 0.8,
+      "span": 15,
       "codes": [],
       "names": [
         "base station",
@@ -432,6 +453,7 @@
       "stroke": "#8a3c00",
       "rotate": true,
       "scale": 0.75,
+      "span": 25.2,
       "codes": [],
       "names": [
         "sar aircraft",
@@ -448,6 +470,7 @@
       "stroke": "#7a0f0f",
       "rotate": false,
       "scale": 0.8,
+      "span": 20,
       "codes": [],
       "names": [
         "sart",
@@ -464,6 +487,7 @@
       "stroke": "#7a0f0f",
       "rotate": false,
       "scale": 0.8,
+      "span": 21.2,
       "codes": [],
       "names": [
         "mob",
@@ -480,6 +504,7 @@
       "stroke": "#7a0f0f",
       "rotate": false,
       "scale": 0.8,
+      "span": 23.2,
       "codes": [],
       "names": [
         "epirb",
