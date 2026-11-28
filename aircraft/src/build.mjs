@@ -14,6 +14,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { stripTypeScriptTypes } from 'node:module';
 import { ICONS, iconSvg } from './icons.mjs';
+import { pathBounds } from '../../shared/extent.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const out = join(here, '..');
@@ -28,6 +29,7 @@ const icons = ICONS.map((i) => ({
   stroke: i.stroke,
   rotate: i.rotate,
   scale: i.scale,
+  span: pathBounds([...[i.body].flat().map((b) => (typeof b === 'string' ? b : b.d)), ...(i.extent ?? [])]).width,
   balloon: !!i.balloon,
   adsb: i.adsb ?? [],
   svg: iconSvg(i),
@@ -51,7 +53,7 @@ const data = icons
   .map(
     (i) =>
       `  {\n    key: '${i.key}',\n    label: ${JSON.stringify(i.label)},\n    group: ${JSON.stringify(i.group)},\n` +
-      `    color: '${i.color}',\n    rotate: ${i.rotate},\n    scale: ${i.scale},\n    balloon: ${i.balloon},\n` +
+      `    color: '${i.color}',\n    rotate: ${i.rotate},\n    scale: ${i.scale},\n    span: ${i.span},\n    balloon: ${i.balloon},\n` +
       `    adsb: ${JSON.stringify(i.adsb)},\n    svg: ${JSON.stringify(i.svg)},\n    template: ${JSON.stringify(i.template)},\n  },`,
   )
   .join('\n');
@@ -78,6 +80,8 @@ export interface AircraftIcon {
   rotate: boolean;
   /** Size relative to a narrow-body airliner (1). */
   scale: number;
+  /** The drawing's wingspan (width) on the 32 x 32 grid, for true-size drawing. */
+  span: number;
   /** Balloon icons keep their own colors. */
   balloon: boolean;
   /** ADS-B emitter categories that select this icon when the type is unknown. */
@@ -95,7 +99,8 @@ ${data}
 export const AIRCRAFT_ICONS = Object.fromEntries(AIRCRAFT_ICON_LIST.map((i) => [i.key, i])) as Record<AircraftIconKey, AircraftIcon>;
 
 ` +
-  readFileSync(join(here, 'classify.ts'), 'utf8');
+  readFileSync(join(here, 'classify.ts'), 'utf8') +
+  readFileSync(join(here, '..', '..', 'shared', 'sizing.ts'), 'utf8');
 
 writeFileSync(join(out, 'aircraft-icons.ts'), ts);
 writeFileSync(join(out, 'aircraft-icons.js'), stripTypeScriptTypes(ts, { mode: 'strip' }).replace(/\n{3,}/g, '\n\n'));

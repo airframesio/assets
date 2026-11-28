@@ -30,6 +30,26 @@ when it is known, from 0.55 for small craft to 1.4 for the largest ships.
 Multiply the app's icon size by it. The sizes are not true ratios, only enough
 to show that some ships are bigger than others.
 
+## Zoom and true size
+
+Both modules include the same sizing helpers (`shared/sizing.ts`), so import
+them from either:
+
+- `iconSizeExpression(base)` is a MapLibre/Mapbox `icon-size` expression:
+  `base` x the zoom curve (`ICON_ZOOM_STOPS`: 0.5 at zoom 1, 1 at zoom 8, 1.75
+  at zoom 17) x the feature's `scale`, and from zoom 12 never smaller than the
+  craft's real size, read from the feature's `meters` property. Set `meters`
+  with `mercatorMeters(sizeMeters, latitude)`, from `aircraftSizeMeters()` or
+  `marineSizeMeters()`; leave it out when unknown. Up close a 747 at the gate
+  or a container ship at the quay covers its real footprint.
+- `iconZoomFactor(zoom)` and `trueIconSize(mercMeters, resolution)` do the
+  same for maps that size icons in code (OpenLayers: its zoom is one more than
+  MapLibre's, and `resolution` is meters per pixel).
+
+The outline and halo are part of the image, so they get thinner as icons
+shrink and thicker as they grow. The halo adds 0.7 px (at 32 px) outside the
+outline.
+
 ## Choosing an icon
 
 `marineIconKey(target)` takes whatever is known about a target and never throws:
