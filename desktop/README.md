@@ -1,15 +1,15 @@
 # Airframes Desktop
 
-Latest version: **0.2.16** ([release notes](https://github.com/airframesio/assets/releases/tag/desktop-v0.2.16))
+Latest version: **0.2.17** ([release notes](https://github.com/airframesio/assets/releases/tag/desktop-v0.2.17))
 
 | Platform | Download |
 | --- | --- |
-| macOS (Apple silicon and Intel) | [Airframes_0.2.16_universal.dmg](https://github.com/airframesio/assets/releases/download/desktop-v0.2.16/Airframes_0.2.16_universal.dmg) |
-| Windows installer (.exe) | [Airframes_0.2.16_x64-setup.exe](https://github.com/airframesio/assets/releases/download/desktop-v0.2.16/Airframes_0.2.16_x64-setup.exe) |
-| Windows installer (.msi) | [Airframes_0.2.16_x64_en-US.msi](https://github.com/airframesio/assets/releases/download/desktop-v0.2.16/Airframes_0.2.16_x64_en-US.msi) |
-| Linux AppImage | [Airframes_0.2.16_amd64.AppImage](https://github.com/airframesio/assets/releases/download/desktop-v0.2.16/Airframes_0.2.16_amd64.AppImage) |
-| Linux .deb | [Airframes_0.2.16_amd64.deb](https://github.com/airframesio/assets/releases/download/desktop-v0.2.16/Airframes_0.2.16_amd64.deb) |
-| Linux .rpm | [Airframes-0.2.16-1.x86_64.rpm](https://github.com/airframesio/assets/releases/download/desktop-v0.2.16/Airframes-0.2.16-1.x86_64.rpm) |
+| macOS (Apple silicon and Intel) | [Airframes_0.2.17_universal.dmg](https://github.com/airframesio/assets/releases/download/desktop-v0.2.17/Airframes_0.2.17_universal.dmg) |
+| Windows installer (.exe) | [Airframes_0.2.17_x64-setup.exe](https://github.com/airframesio/assets/releases/download/desktop-v0.2.17/Airframes_0.2.17_x64-setup.exe) |
+| Windows installer (.msi) | [Airframes_0.2.17_x64_en-US.msi](https://github.com/airframesio/assets/releases/download/desktop-v0.2.17/Airframes_0.2.17_x64_en-US.msi) |
+| Linux AppImage | [Airframes_0.2.17_amd64.AppImage](https://github.com/airframesio/assets/releases/download/desktop-v0.2.17/Airframes_0.2.17_amd64.AppImage) |
+| Linux .deb | [Airframes_0.2.17_amd64.deb](https://github.com/airframesio/assets/releases/download/desktop-v0.2.17/Airframes_0.2.17_amd64.deb) |
+| Linux .rpm | [Airframes-0.2.17-1.x86_64.rpm](https://github.com/airframesio/assets/releases/download/desktop-v0.2.17/Airframes-0.2.17-1.x86_64.rpm) |
 
 Installed copies update themselves from
 [`latest.json`](https://github.com/airframesio/assets/releases/latest/download/latest.json)
@@ -18,6 +18,7 @@ feed the 2022 alpha (0.1.x) reads.
 
 ## All versions
 
+- [v0.2.17](https://github.com/airframesio/assets/releases/tag/desktop-v0.2.17), 2026-11-28
 - [v0.2.16](https://github.com/airframesio/assets/releases/tag/desktop-v0.2.16), 2026-11-27
 - [v0.2.15](https://github.com/airframesio/assets/releases/tag/desktop-v0.2.15), 2026-11-27
 - [v0.2.14](https://github.com/airframesio/assets/releases/tag/desktop-v0.2.14), 2026-11-27

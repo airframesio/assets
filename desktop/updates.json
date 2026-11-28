@@ -1,15 +1,15 @@
 {
-  "version": "v0.2.16",
-  "notes": "- Flight map: keep zoom and pan on refresh, add Follow and Fit path\n- Airlines, airline pages, station leaderboard and stations by country",
-  "pub_date": "2026-11-27T21:40:37.034Z",
+  "version": "v0.2.17",
+  "notes": "- Public profiles, shareable message pages and a Heard By pane\n- Flight page: show through flight legs and link earlier legs",
+  "pub_date": "2026-11-28T01:42:34.008Z",
   "platforms": {
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dXhnN0o2cHFTN01xL0txSXBNZE9GRDcvbldzQ3orMnBKandWdzZJQXI0bjZQcHBEWTNvSVBvbnpjaHZSUlVwUzR6b1NtZFJZUzJKcmVLalJabW0xb0FzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODE1MzA4CWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTYKVmd0MFY3VE1vbVp3SlhJNlZsQjY1OUliV2t6eE5VejFzUVNyYVFsWmhIT1RXcmhFY2MxNjhhWDZJRXBXS3pKbXRJTVBUbE4xWnBTUkQ4M0dhOFgvQXc9PQo=",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.16/Airframes_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTZuUW8ySmdMVkg2amlYYjdHRWc5QWlJNEE0YnduMHlETisxSk5tYzFoazVNd0h2VUdidFB4ejEzNldTUEFhZU9WK1p3aWUzektIS1pFL0hDWTRXVEE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODI5Njk5CWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTcKR2VMYjdJcitTYWdvK2ZiMGFqc2ZGK2Rvb081eGR6aG5CcUNhWC9NK2RRMjJZeU5lOG5vdmt0KzFHT21aeHRocWo5dGdGL0wvOUtFaExDc2puL1EzQlE9PQo=",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.17/Airframes_universal.app.tar.gz"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dXhnN0o2cHFTN01xL0txSXBNZE9GRDcvbldzQ3orMnBKandWdzZJQXI0bjZQcHBEWTNvSVBvbnpjaHZSUlVwUzR6b1NtZFJZUzJKcmVLalJabW0xb0FzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODE1MzA4CWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTYKVmd0MFY3VE1vbVp3SlhJNlZsQjY1OUliV2t6eE5VejFzUVNyYVFsWmhIT1RXcmhFY2MxNjhhWDZJRXBXS3pKbXRJTVBUbE4xWnBTUkQ4M0dhOFgvQXc9PQo=",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.16/Airframes_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTZuUW8ySmdMVkg2amlYYjdHRWc5QWlJNEE0YnduMHlETisxSk5tYzFoazVNd0h2VUdidFB4ejEzNldTUEFhZU9WK1p3aWUzektIS1pFL0hDWTRXVEE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODI5Njk5CWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTcKR2VMYjdJcitTYWdvK2ZiMGFqc2ZGK2Rvb081eGR6aG5CcUNhWC9NK2RRMjJZeU5lOG5vdmt0KzFHT21aeHRocWo5dGdGL0wvOUtFaExDc2puL1EzQlE9PQo=",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.17/Airframes_universal.app.tar.gz"
     }
   }
 }
