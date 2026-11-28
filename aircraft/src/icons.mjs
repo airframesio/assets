@@ -159,6 +159,8 @@ export const ICONS = [
       `<path d="M14.4 9.6Q16 8.6 17.6 9.6" stroke="${SHADE}" stroke-width="0.9" fill="none" stroke-linecap="round"/>`,
     ],
     haloExtra: `<path d="M6.2 5.2L25.8 20.8M25.8 5.2L6.2 20.8" stroke-width="3.6" fill="none"/>`,
+    // The rotor, not the fuselage, is the width the real size is measured by.
+    extent: ['M6.2 5.2L25.8 20.8M25.8 5.2L6.2 20.8'],
   },
   {
     key: 'drone', label: 'Drone (UAV)', group: 'Rotorcraft and other', color: '#7048e8', stroke: '#341b8f', rotate: true, scale: 0.5,

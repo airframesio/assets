@@ -29,7 +29,7 @@ const icons = ICONS.map((i) => ({
   stroke: i.stroke,
   rotate: i.rotate,
   scale: i.scale,
-  span: pathBounds([i.body].flat().map((b) => (typeof b === 'string' ? b : b.d))).width,
+  span: pathBounds([...[i.body].flat().map((b) => (typeof b === 'string' ? b : b.d)), ...(i.extent ?? [])]).width,
   balloon: !!i.balloon,
   adsb: i.adsb ?? [],
   svg: iconSvg(i),

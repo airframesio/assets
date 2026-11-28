@@ -166,7 +166,7 @@ export const AIRCRAFT_ICON_LIST: AircraftIcon[] = [
     color: '#2b6cd4',
     rotate: true,
     scale: 0.7,
-    span: 7.2,
+    span: 19.6,
     balloon: false,
     adsb: ["A7"],
     svg: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><g fill=\"#fff\" stroke=\"#fff\" stroke-linejoin=\"round\" stroke-linecap=\"round\" opacity=\"0.92\"><path d=\"M12.4 13A3.6 5.4 0 1 0 19.6 13A3.6 5.4 0 1 0 12.4 13Z\" stroke-width=\"2.5\"/><path d=\"M15.2 17H16.8V28.4H15.2Z\" stroke-width=\"2.5\"/><path d=\"M13.6 26.4H15Q15.6 26.4 15.6 27V27.4Q15.6 28 15 28H13.6Q13 28 13 27.4V27Q13 26.4 13.6 26.4ZM17 26.4H18.4Q19 26.4 19 27V27.4Q19 28 18.4 28H17Q16.4 28 16.4 27.4V27Q16.4 26.4 17 26.4Z\" stroke-width=\"2.5\"/><path d=\"M6.2 5.2L25.8 20.8M25.8 5.2L6.2 20.8\" stroke-width=\"2.4\" fill=\"none\"/></g><path d=\"M12.4 13A3.6 5.4 0 1 0 19.6 13A3.6 5.4 0 1 0 12.4 13Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M15.2 17H16.8V28.4H15.2Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M13.6 26.4H15Q15.6 26.4 15.6 27V27.4Q15.6 28 15 28H13.6Q13 28 13 27.4V27Q13 26.4 13.6 26.4ZM17 26.4H18.4Q19 26.4 19 27V27.4Q19 28 18.4 28H17Q16.4 28 16.4 27.4V27Q16.4 26.4 17 26.4Z\" fill=\"#2b6cd4\" stroke=\"#123a7a\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M6.2 5.2L25.8 20.8M25.8 5.2L6.2 20.8\" stroke=\"#123a7a\" stroke-width=\"1.3\" stroke-linecap=\"round\"/><circle cx=\"16\" cy=\"13\" r=\"1.3\" fill=\"#123a7a\"/><path d=\"M14.4 9.6Q16 8.6 17.6 9.6\" stroke=\"rgba(0,0,0,0.3)\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/></svg>",
