@@ -1,15 +1,15 @@
 {
-  "version": "v0.2.21",
-  "notes": "- Android: release signing with the Play upload key; versionCode from the version\n- Update window: show what's new in every version since the installed one\n- ATC: hear recent calls again, favorite airports with alerts\n- ATC: captions newest first, at the top\n- Wip: replay and alerts\n- ATC: linked transcripts like atc.airframes.io\n- ATC: two-pane Desktop layout, compact phone player, caption history, ATC tab\n- ATC fix: phone layout no longer overlaps or clips",
-  "pub_date": "2026-11-28T07:05:42.472Z",
+  "version": "v0.2.22",
+  "notes": "- Map: Track the selected aircraft, ship or balloon\n- Map: stream and glide every aircraft, ship and balloon in view (paid plans)\n- Map: size icons by wingspan and ship length, by zoom, real size up close\n- Map: keep the floating panes from running into each other\n- ATC: ATC feeders on My stations and an ATC leaderboard\n- Drop AGENTS.md that next dev generated\n- Flight legs: stop clipping the current leg's outline at the top\n- ATC: a small spectrogram beside each recent call when the window is wide\n- Screenshots: Radar map track before and after\n- Map: ignore 0\u00b0N 0\u00b0E and impossible jumps when extending a path\n- Android: the sideloaded APK updates itself; release it with the desktop app\n- Map card: name the airline from the ICAO callsign, not the airframe's",
+  "pub_date": "2026-11-28T08:48:10.054Z",
   "platforms": {
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dXh6SXBoYkg2UXpUT3ZiNHdaQ3BSaXN4ak1pazk5My9pRzdvb3RQRnRjcjl6VjM0U3k4bmhXQlZ6elR2NUsrUVcraklOTEg5ditJYmpUNTdHOVpwVGdVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODQ5MTA5CWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMjEKZjFHZnNrVHFxTzE3VUpyUVloTGVYWElOdEdUTDQzQUQ1d3lzQXJnV0Q5Syt4VGxsZEYxWjlrYm9LV2NGSzNXeVh3L3dxY0tuY2R4ckUwQmRUaStqQ1E9PQo=",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.21/Airframes_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTVKbW9GUmVVR0RJb051Q1VCUDRxWnAzMy80REdsaE1UQmNUUzh1dXNFQWVSaldoTnVsVkQwSHVzRlh6RDN0SGJuRFdwM3Y5RFVRUmU5ZUdhZm1ybEFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODU1MDcyCWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMjIKRzR0ZFBydGh6U2kzOWpHakxTSDNoOUwram1SUmZVL2lmS1hoSlhWWm9KZ2dmUURFemJib0szWDRibEtHb0l2RmZKUGNRYThFQVR3eGdpUWNVaHhZREE9PQo=",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.22/Airframes_universal.app.tar.gz"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dXh6SXBoYkg2UXpUT3ZiNHdaQ3BSaXN4ak1pazk5My9pRzdvb3RQRnRjcjl6VjM0U3k4bmhXQlZ6elR2NUsrUVcraklOTEg5ditJYmpUNTdHOVpwVGdVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODQ5MTA5CWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMjEKZjFHZnNrVHFxTzE3VUpyUVloTGVYWElOdEdUTDQzQUQ1d3lzQXJnV0Q5Syt4VGxsZEYxWjlrYm9LV2NGSzNXeVh3L3dxY0tuY2R4ckUwQmRUaStqQ1E9PQo=",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.21/Airframes_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTVKbW9GUmVVR0RJb051Q1VCUDRxWnAzMy80REdsaE1UQmNUUzh1dXNFQWVSaldoTnVsVkQwSHVzRlh6RDN0SGJuRFdwM3Y5RFVRUmU5ZUdhZm1ybEFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODU1MDcyCWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMjIKRzR0ZFBydGh6U2kzOWpHakxTSDNoOUwram1SUmZVL2lmS1hoSlhWWm9KZ2dmUURFemJib0szWDRibEtHb0l2RmZKUGNRYThFQVR3eGdpUWNVaHhZREE9PQo=",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.22/Airframes_universal.app.tar.gz"
     }
   }
 }
