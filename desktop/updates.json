@@ -1,15 +1,15 @@
 {
-  "version": "v0.2.19",
-  "notes": "- ATC: SkyControl captions on the device, airport picker, atc.airframes.io links\n- Flight page: status (At gate, Boarding, Landed, Arrived), OOOI, times and gates",
-  "pub_date": "2026-11-28T04:31:23.039Z",
+  "version": "v0.2.20",
+  "notes": "- feat(map): glide flights from /flights/active at their reported speed",
+  "pub_date": "2026-11-28T04:54:22.547Z",
   "platforms": {
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dS9XbjJaYkE4dTNLQWk0YmQ5TUFjUExQWjNXcnJtbVFVMTQvdnNrTDdyVGJuSmhPWlptVzJEMzRpR0NGNHhiKzVTQmJRcVA1anV5eTFsdk1qUk1ia1F3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODM5OTU1CWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTkKZVNEQktIVm5ETmd1S3l6U2RISkdzT3pMVWZOTlhNMXV6bkU1Sm1PcFlNRTA3cVlJWWVmZWtHaG5QYnJCUVJNNGMrcEpqUGR5bmJlQk9xY0hHZVBqQ0E9PQo=",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.19/Airframes_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTcxSWZUeFA5eWErbHFhWVVzVHZVbW9STEhLT28raitzY3JzZFJFMDNYRDd1MGRMc0I3eDdjL3hFYy83cXZZRTlSV1IrVzd0eCttZ3RnVGJSNDVWUXdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODQxMjg0CWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMjAKekVNOGk5Vll2QTY5VThXVHpGUFFLT0hnbGJDK3V2NlNjeTBZc21nTm84N2xYa1RKVGRJK09xRktWQnRIL0FTaGxSRjVoMTlTU3pLclFTLzMwMnU0QlE9PQo=",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.20/Airframes_universal.app.tar.gz"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dS9XbjJaYkE4dTNLQWk0YmQ5TUFjUExQWjNXcnJtbVFVMTQvdnNrTDdyVGJuSmhPWlptVzJEMzRpR0NGNHhiKzVTQmJRcVA1anV5eTFsdk1qUk1ia1F3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODM5OTU1CWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMTkKZVNEQktIVm5ETmd1S3l6U2RISkdzT3pMVWZOTlhNMXV6bkU1Sm1PcFlNRTA3cVlJWWVmZWtHaG5QYnJCUVJNNGMrcEpqUGR5bmJlQk9xY0hHZVBqQ0E9PQo=",
-      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.19/Airframes_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVReUphaWlxWFN2dTcxSWZUeFA5eWErbHFhWVVzVHZVbW9STEhLT28raitzY3JzZFJFMDNYRDd1MGRMc0I3eDdjL3hFYy83cXZZRTlSV1IrVzd0eCttZ3RnVGJSNDVWUXdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODQxMjg0CWZpbGU6QWlyZnJhbWVzLmFwcC50YXIuZ3oJdmVyc2lvbjowLjIuMjAKekVNOGk5Vll2QTY5VThXVHpGUFFLT0hnbGJDK3V2NlNjeTBZc21nTm84N2xYa1RKVGRJK09xRktWQnRIL0FTaGxSRjVoMTlTU3pLclFTLzMwMnU0QlE9PQo=",
+      "url": "https://github.com/airframesio/assets/releases/download/desktop-v0.2.20/Airframes_universal.app.tar.gz"
     }
   }
 }
