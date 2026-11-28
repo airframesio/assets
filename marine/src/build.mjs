@@ -92,7 +92,8 @@ ${data}
 export const MARINE_ICONS = Object.fromEntries(MARINE_ICON_LIST.map((i) => [i.key, i])) as Record<MarineIconKey, MarineIcon>;
 
 ` +
-  readFileSync(join(here, 'classify.ts'), 'utf8');
+  readFileSync(join(here, 'classify.ts'), 'utf8') +
+  readFileSync(join(here, '..', '..', 'shared', 'sizing.ts'), 'utf8');
 
 writeFileSync(join(out, 'marine-icons.ts'), ts);
 writeFileSync(join(out, 'marine-icons.js'), stripTypeScriptTypes(ts, { mode: 'strip' }).replace(/\n{3,}/g, '\n\n'));

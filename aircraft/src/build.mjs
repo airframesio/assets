@@ -95,7 +95,8 @@ ${data}
 export const AIRCRAFT_ICONS = Object.fromEntries(AIRCRAFT_ICON_LIST.map((i) => [i.key, i])) as Record<AircraftIconKey, AircraftIcon>;
 
 ` +
-  readFileSync(join(here, 'classify.ts'), 'utf8');
+  readFileSync(join(here, 'classify.ts'), 'utf8') +
+  readFileSync(join(here, '..', '..', 'shared', 'sizing.ts'), 'utf8');
 
 writeFileSync(join(out, 'aircraft-icons.ts'), ts);
 writeFileSync(join(out, 'aircraft-icons.js'), stripTypeScriptTypes(ts, { mode: 'strip' }).replace(/\n{3,}/g, '\n\n'));

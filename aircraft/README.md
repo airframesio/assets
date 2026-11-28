@@ -31,10 +31,32 @@ colors.
 
 ## Sizes
 
-`scale` (and `aircraftIconScale(key)`) is the icon's size relative to a
-narrow-body airliner: a four-engine jet is 1.4, a business jet 0.7, a light
-aircraft 0.6, a drone 0.5. It is not a true size ratio, only enough to show
-that some aircraft are bigger than others. Multiply the app's icon size by it.
+`scale` is the icon's size relative to a narrow-body airliner: a four-engine
+jet is 1.4, a business jet 0.7, a light aircraft 0.6, a drone 0.5.
+`aircraftIconScale(key, type)` sizes listed ICAO types by their real wingspan
+instead (rotor diameter for helicopters; `aircraftWingspan(type)`), on a log
+scale from 0.45 to 1.5: an A380 is 1.32, a 737 1.0, a CRJ-900 0.87, a Cessna
+172 0.55. Multiply the app's icon size by it.
+
+## Zoom and true size
+
+Both modules include the same sizing helpers (`shared/sizing.ts`), so import
+them from either:
+
+- `iconSizeExpression(base)` is a MapLibre/Mapbox `icon-size` expression:
+  `base` x the zoom curve (`ICON_ZOOM_STOPS`: 0.5 at zoom 1, 1 at zoom 8, 1.75
+  at zoom 17) x the feature's `scale`, and from zoom 12 never smaller than the
+  craft's real size, read from the feature's `meters` property. Set `meters`
+  with `mercatorMeters(sizeMeters, latitude)`, from `aircraftSizeMeters()` or
+  `marineSizeMeters()`; leave it out when unknown. Up close a 747 at the gate
+  or a container ship at the quay covers its real footprint.
+- `iconZoomFactor(zoom)` and `trueIconSize(mercMeters, resolution)` do the
+  same for maps that size icons in code (OpenLayers: its zoom is one more than
+  MapLibre's, and `resolution` is meters per pixel).
+
+The outline and halo are part of the image, so they get thinner as icons
+shrink and thicker as they grow. The halo adds 0.7 px (at 32 px) outside the
+outline.
 
 ## Choosing an icon
 

@@ -263,6 +263,19 @@ export function darken(hex, amount = 0.5) {
   return '#' + c.map((v) => v.toString(16).padStart(2, '0')).join('');
 }
 
+// The light halo: HALO is the halo's total extra width over the outline
+// (half of it shows on each side). Extra halo parts (props, booms, arcs) were
+// drawn for the old 2.6 width and are thinned by the same amount.
+const HALO = 1.4;
+const thin = (v, by, min) => String(+Math.max(min, +v - by).toFixed(2));
+const thinHalo = (svg) =>
+  svg.replace(/<[a-z]+\b[^>]*>/g, (tag) =>
+    / stroke-width="/.test(tag)
+      ? tag.replace(/stroke-width="([\d.]+)"/, (_, w) => `stroke-width="${thin(w, 2.6 - HALO, 0.6)}"`)
+      : // Filled shapes (boom ends) shrink by half the width on every side.
+        tag.replace(/ r="([\d.]+)"/, (_, r) => ` r="${thin(r, (2.6 - HALO) / 2, 0.4)}"`),
+  );
+
 /**
  * One icon as a standalone SVG document. Aircraft keep the {{fill}} and
  * {{stroke}} tokens when `template` is true, so an app can recolor them.
@@ -275,8 +288,8 @@ export function iconSvg(icon, { size = 32, halo = true, template = false } = {})
   if (halo) {
     parts.push(
       `<g fill="#fff" stroke="#fff" stroke-linejoin="round" stroke-linecap="round" opacity="0.92">` +
-        bodies.map((b) => `<path d="${b.d}"${rule} stroke-width="${sw + 2.6}"/>`).join('') +
-        (icon.haloExtra ?? '') +
+        bodies.map((b) => `<path d="${b.d}"${rule} stroke-width="${sw + HALO}"/>`).join('') +
+        thinHalo(icon.haloExtra ?? '') +
         `</g>`,
     );
   }

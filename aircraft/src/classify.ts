@@ -104,10 +104,82 @@ export function aircraftIconRotates(key: AircraftIconKey): boolean {
   return AIRCRAFT_ICONS[key]?.rotate ?? false;
 }
 
-/** Relative icon size (1 = a narrow-body airliner), for `icon-size` or a pixel size. */
-export function aircraftIconScale(key: AircraftIconKey): number {
-  return AIRCRAFT_ICONS[key]?.scale ?? 1;
+// Wingspans in meters by ICAO type designator (rotor diameter for
+// helicopters), from manufacturer data, for the common types on the map.
+// Winglet and sharklet versions use the larger span.
+const SPAN_LIST: [number, string][] = [
+  [79.8, 'A388 A380'], [88.4, 'A225 AN225'], [73.3, 'A124 AN124'], [68.4, 'B748'], [64.4, 'B744 B74F B74S'], [59.6, 'B741 B742 B743'],
+  [71.8, 'B778 B779'], [64.8, 'B77L B77W B77F A359 A35K'], [60.9, 'B772 B773'], [60.1, 'B788 B789 B78X'],
+  [64, 'A338 A339'], [60.3, 'A332 A333 A337 A33F A342 A343 KC30 MRTT'], [63.5, 'A345 A346'],
+  [51.9, 'B764'], [50.9, 'B762 B763 B76F'], [44.8, 'A306 A30B'], [43.9, 'A310'], [51.7, 'MD11'], [50.4, 'DC10 KC10'],
+  [48.1, 'KC46'], [41.1, 'B752 B753 C32'], [35.9, 'B37M B38M B39M B3XM'], [35.8, 'B737 B738 B739 BBJ1 BBJ2 C40 A319 A320 A321 A19N A20N A21N C919'],
+  [37.6, 'P8'], [34.3, 'B736'], [34.1, 'A318'], [28.9, 'B733 B734 B735'], [28.4, 'B731 B732'], [32.9, 'MD80 MD81 MD82 MD83 MD87 MD88 MD90'],
+  [28.5, 'B712'], [35.1, 'BCS1 BCS3 E295'], [33.7, 'E290'], [28.7, 'E190 E195 C27J'], [26, 'E170'], [28.7, 'E175 E75L'], [26, 'E75S'],
+  [20, 'E135 E145 E35L'], [21.2, 'CRJ1 CRJ2'], [23.2, 'CRJ7'], [24.9, 'CRJ9'], [26.2, 'CRJX'], [27.8, 'SU95'], [27.3, 'AJ27 ARJ2'],
+  [28.1, 'F70 F100'], [26.3, 'RJ70 RJ85 RJ1H B461 B462 B463'], [29, 'F50 F27'], [27.1, 'AT72 AT73 AT75 AT76'], [24.6, 'AT43 AT44 AT45 AT46'],
+  [28.4, 'DH8D'], [27.4, 'DH8C'], [25.9, 'DH8A DH8B'], [19.8, 'DHC6'], [21.4, 'SF34'], [24.8, 'SB20'], [18.3, 'JS41'], [15.9, 'JS31 JS32'],
+  [17.7, 'B190 B350'], [16.6, 'BE20 BE30'], [15.3, 'BE9L BE9T'], [21, 'D328 J328'], [17, 'D228'], [19.5, 'L410'], [29.2, 'AN26 AN24 MA60'],
+  [25.8, 'C295 CN35'], [40.4, 'C130 C30J HRC1'], [42.4, 'A400'], [51.8, 'C17'], [67.9, 'C5 C5M'], [50.5, 'IL76'], [38, 'AN12'],
+  [39.9, 'K35R KC35 RC35 C135 RQ4'], [44.4, 'E3CF E3TF'], [45.2, 'E6 E6B'], [56.4, 'B52'], [30.4, 'P3 P3C CP14'], [24.6, 'E2 C2'],
+  [42, 'B1'], [52.4, 'B2'], [20.1, 'MQ9'], [13, 'F15'], [13.6, 'F18 F18S FA18'], [10, 'F16'], [10.7, 'F35'], [13.6, 'F22'], [11, 'EUFI TYPH'],
+  [10.9, 'RFAL'], [8.4, 'GRIF'], [17.5, 'A10'], [9.4, 'HAWK T45'], [8.2, 'T38'], [10.2, 'PC21 T6'],
+  [31.7, 'GL7T GL8T'], [28.7, 'GLEX GL5T GL6T'], [30.4, 'GLF6 GA7C GA8C'], [28.5, 'GLF5 GA5C GA6C'], [23.7, 'GLF4 GLF3'], [19.2, 'G280'],
+  [21, 'CL30 CL35'], [19.6, 'CL60'], [26.2, 'FA7X FA8X FA6X'], [19.3, 'F900 FA50'], [21.4, 'F2TH'], [16.3, 'FA20 FA10'],
+  [22, 'C700 C68A'], [19.4, 'C750'], [17.2, 'C56X C560 C650 C680'], [15.9, 'C550 C551 C55B C501'], [15.5, 'C25B C25C C25M'], [14.4, 'C25A C525'],
+  [13.2, 'C510'], [16.2, 'E55P E545 E550'], [12.3, 'E50P'], [17, 'PC24'], [15.7, 'H25B H25C H25A'], [14.6, 'LJ45 LJ40 LJ75 LJ70'], [13.4, 'LJ60 LJ55'],
+  [12, 'LJ35 LJ31 LJ24 LJ25'], [13.6, 'BE40 PRM1'], [12.1, 'HDJT'], [11.8, 'SF50'],
+  [16.3, 'PC12'], [15.9, 'C208'], [12.8, 'TBM7 TBM8 TBM9'], [14.1, 'PC6T'], [13.1, 'PA46 M600'], [12.8, 'KODI'],
+  [11, 'C172 C170 C175 C177 C182 C180 C185 P210 C210'], [10.1, 'C150 C152 C162'], [11, 'C206 T206 C207'], [10.7, 'PA28 P28A P28B P28R P28T PA32 P32R'],
+  [10.8, 'PA18 PA20 PA22 J3 CUB2'], [11.7, 'SR22 S22T SR20 SR21'], [11.6, 'DA40 DA42'], [10.8, 'DA20 DV20'], [14.6, 'DA62'], [10.2, 'BE33 BE35 BE36'],
+  [11.5, 'BE55 BE58 BE95'], [11.6, 'BE76'], [11.9, 'PA34 PA44 PA30'], [12.4, 'PA31 PA23 PA27'], [11.3, 'C310 C320 C340'], [13.5, 'C402 C404 C414 C421'],
+  [11, 'M20P M20T M20J'], [7.7, 'RV4 RV6 RV7 RV8 RV12'], [8.8, 'RV10 RV9'], [11.6, 'P68'], [14.9, 'BN2P'], [17, 'Y12'],
+  [10.2, 'EC35 H135 B06 B06T EC30 H130'], [11, 'EC45 H145 BK17'], [10.7, 'AS50 H125 AS55 B407 B505'], [12.6, 'EC55 H155 AS65'], [14.8, 'EC75 H175 H160'],
+  [16.2, 'EC25 H225 H215 AS32'], [13.8, 'A139 AW09'], [12.9, 'A169'], [14.6, 'A189'], [11, 'A109 A119'], [13.4, 'S76'], [17.2, 'S92'], [18.9, 'S61'],
+  [16.4, 'H60 UH60 MH60 S70'], [14.6, 'AH64 H64'], [18.3, 'CH47 H47'], [24.1, 'CH53 H53'], [11.6, 'V22'], [21.3, 'MI8 MI17'], [17.3, 'MI24'], [32, 'MI26'],
+  [14.6, 'B412 B212 UH1 H1'], [12.1, 'B429 B427 B430'], [10.1, 'R44'], [7.7, 'R22'], [10.1, 'R66'], [16.3, 'NH90'], [8.4, 'EC20 H120'],
+  [15, 'GLID'], [10, 'ULAC'],
+];
+const SPANS: Record<string, number> = {};
+for (const [m, list] of SPAN_LIST) for (const t of list.split(' ')) SPANS[t] ??= m;
+
+/** The wingspan (rotor diameter for helicopters) in meters for an ICAO type designator, when listed. */
+export function aircraftWingspan(type: string | null | undefined): number | null {
+  const t = type?.trim().toUpperCase();
+  return (t && SPANS[t]) || null;
 }
+
+/** A narrow-body airliner's span, which draws at scale 1. */
+const BASE_SPAN = 35;
+
+/**
+ * Relative icon size (1 = a narrow-body airliner), for `icon-size` or a pixel
+ * size. Pass the ICAO type designator to size listed types by their real
+ * wingspan (on a log scale, so a Cessna is not a dot next to an A380);
+ * others, and balloons, use their icon's size.
+ */
+export function aircraftIconScale(key: AircraftIconKey, type?: string | null): number {
+  const icon = AIRCRAFT_ICONS[key];
+  const span = icon?.balloon ? null : aircraftWingspan(type);
+  if (span) return Math.min(1.5, Math.max(0.45, 1 + 0.9 * Math.log10(span / BASE_SPAN)));
+  return icon?.scale ?? 1;
+}
+
+/**
+ * The aircraft's real size in meters for true-scale drawing up close: the
+ * listed wingspan, else a typical one for its icon. Null for balloons and
+ * unknown aircraft.
+ */
+export function aircraftSizeMeters(key: AircraftIconKey, type?: string | null): number | null {
+  const icon = AIRCRAFT_ICONS[key];
+  if (!icon || icon.balloon || key === 'unknown') return null;
+  return aircraftWingspan(type) ?? TYPICAL_SPANS[key] ?? null;
+}
+
+/** Typical spans (meters) for aircraft whose type is not listed. */
+const TYPICAL_SPANS: Partial<Record<AircraftIconKey, number>> = {
+  airliner: 35, widebody: 60, quad: 65, regional: 26, turboprop: 27, bizjet: 19, light: 11, 'light-twin': 12, glider: 15,
+  ultralight: 10, helicopter: 11, drone: 15, airship: 20, fighter: 11, 'military-transport': 40, 'ground-vehicle': 6,
+};
 
 /** Darkens a #rrggbb color, for an outline that matches a custom fill. */
 export function darkenColor(hex: string, amount = 0.5): string {

@@ -179,3 +179,13 @@ export function marineIconScale(key: MarineIconKey, lengthMeters?: number | null
   }
   return icon?.scale ?? 1;
 }
+
+/**
+ * The ship's real length in meters for true-scale drawing up close (AIS bow
+ * + stern distances), or null when unknown or not a ship.
+ */
+export function marineSizeMeters(key: MarineIconKey, lengthMeters?: number | null): number | null {
+  const icon = MARINE_ICONS[key];
+  if (!icon?.rotate || key === 'sar-aircraft' || lengthMeters == null || !(lengthMeters > 2 && lengthMeters < 600)) return null;
+  return lengthMeters;
+}
